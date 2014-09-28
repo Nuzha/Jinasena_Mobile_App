@@ -1,0 +1,102 @@
+package com.NIRR.jenasena;
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+import android.util.Log;
+import java.util.Calendar;
+
+public class RepLocBackgroundService extends Service{
+	
+	
+	
+	GPSTracker gps;    
+	GMapV2Direction md;
+	DBCreater entry;
+	@Override
+	public void onCreate() {
+		// TODO Auto-generated method stub
+		super.onCreate();
+		 md = new GMapV2Direction();
+		 gps = new GPSTracker(this);
+		 entry = new DBCreater(this);
+		 entry.openforread();
+		
+Thread worker=new Thread(new Runnable() {
+			
+			//@Override
+			public void run() {
+				myWork();
+			}
+			
+			
+		});
+		worker.start();
+	}
+	private void myWork(){ 
+		
+		delay(8000);
+		int counter=10;
+		 int mYear;
+		 int mMonth;
+		 int mDay;
+		 int time;
+		
+		while(counter>0){
+			counter--;
+			Log.e("a",""+counter);
+			
+			delay(2000);
+			
+
+				// check if GPS enabled		
+		        if(gps.canGetLocation()){
+		        	
+		        	double latitude = gps.getLatitude();
+		        	double longitude = gps.getLongitude();
+		        	Log.e("lat", ""+latitude);
+		        	Log.e("lan", ""+longitude);
+		        	final Calendar cal = Calendar.getInstance();
+		            mYear = cal.get(Calendar.YEAR);
+		            mMonth = cal.get(Calendar.MONTH);
+		            mDay = cal.get(Calendar.DAY_OF_MONTH);
+		            time=cal.get(Calendar.HOUR_OF_DAY);
+		        	if(latitude != 0.00 && longitude != 0.00 && entry.countTrackloc()!=0){
+		        		entry.cleanstorloc();//getloc
+		        		entry.PutStorloc(entry.getlogrep().getString(1), longitude, latitude,""+mYear+"/"+mMonth+"/"+mDay, ""+time);
+		        		Log.e("p","print");
+		        		entry.getloc(entry.getlogrep().getString(1), longitude, latitude,""+mYear+"/"+mMonth+"/"+mDay, ""+time);
+		        		Log.e("Date Time",""+mYear+"/"+mMonth+"/"+mDay +"time"+time);
+		        		Log.e("fill locs",""+entry.countGetloc());  
+		        	}
+		        	//entry.createRepentry("Del01Rep11", "Del01Rep11", "Infass", "Del01","Del01Rep11","0721654739","Infass@gmail","Kollupitiya");
+		        }
+		        	
+		        	
+			
+		}
+		
+	}
+	@Override
+	public IBinder onBind(Intent arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	private void delay(int milliseconds){
+		try{
+		Thread.sleep(milliseconds);
+		}catch(InterruptedException ex){
+			
+		}
+	}
+
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		return START_STICKY;
+	}
+	
+	public void onDestroy() {
+		
+		stopSelf();
+	}
+
+}

@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.NIRR.jenasena"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="9" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.NIRR.jenasena.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.DelearMenu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.DELEARMENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.RepMenu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.REPMENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.MenuCustomer"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MENUCUSTOMER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.AddCustomer"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.ADDCUSTOMER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.SearchCustomer"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCHCUSTOMER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.CustomerDataForDelear"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CUSTOMERDATAFORDELEAR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.Email"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.EMAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.CustomerDataForRep"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CUSTOMERDATAFORREP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.RepSearchCustomer"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.REPSEARCHCUSTOMER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.RepData"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.REPDATA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.SearchRep"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCHREP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.ChartMenu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CHARTMENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.RepLocation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.REPLOCATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.C_Customer"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.C_CUSTOMER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.C_Stock"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.C_STOCK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.MainDelRepProformance"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAINDELREPPROFORMANCE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.MainDelCustomerProformance"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAINDELCUSTOMERPROFORMANCE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.MainDelRepStock"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAINDELREPSTOCK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.MainDelCustomerBillBalance"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAINDELCUSTOMERBILLBALANCE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.RepChartMenu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.REPCHARTMENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.Chart_D_DelearStock"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CHART_D_DELEARSTOCK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.Chart_D_RepProformance"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CHART_D_REPPROFORMANCE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.Chart_D_CustomerBallance"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CHART_D_CUSTOMERBALLANCE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.Chart_D_CustomerProformance"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CHART_D_CUSTOMERPROFORMANCE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.Chart_D_ItemHistory"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CHART_D_ITEMHISTORY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.Chart_D_RepStock"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CHART_D_REPSTOCK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.RepCurrentLocation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.REPCURRENTLOCATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.CustomerLocation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CUSTOMERLOCATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.BackupSettingList"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.BACKUPSETTINGLIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.Chart_R_RepStock"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CHART_R_REPSTOCK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.Chart_R_RepStockChart"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.CHART_R_REPSTOCKCHART" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.NIRR.jenasena.RepHistoryMap"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.REPHISTORYMAP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.MainDelItemHistory"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAINDELITEMHISTORY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Goolge API Key -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDKDFMTkCkuFjxV4JGwU1frL1A_oYWwrZk" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.NIRR.jenasena.DeleteAssignItems"
+            android:label="@string/title_activity_delete_assign_items" >
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.NewAssignItems"
+            android:label="@string/title_activity_new_assign_items" >
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.RepListView"
+            android:label="@string/title_activity_rep_list_view" >
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.SearchStock"
+            android:label="@string/title_activity_search_stock" >
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.ViewMonthlyHistory"
+            android:label="@string/title_activity_view_monthly_history" >
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.ViewRepHistory"
+            android:label="@string/title_activity_view_rep_history" >
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.View_Assigned_Stock"
+            android:label="@string/title_activity_view__assigned__stock" >
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.AssigntoCustomers"
+            android:label="@string/title_activity_assignto_customers" >
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.ViewInvoice"
+            android:label="@string/title_activity_view_invoice" >
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.UpdateInvoice"
+            android:label="@string/title_activity_update_invoice" >
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.CustomersAcdnToRep"
+            android:label="@string/title_activity_customers_acdn_to_rep" >
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.Selection"
+            android:label="@string/title_activity_selection" >
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.FinalizedInvoice"
+            android:label="@string/title_activity_finalized_invoice" >
+        </activity>
+        
+        <activity
+            android:name="com.NIRR.jenasena.RepCustomerHistory"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.REPCUSTOMERHISTORY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.DemoCustomerSearch"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEMOCUSTOMERSEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.ViewCustomerHistory"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEWCUSTOMERHISTORY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.LocationViewer"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.LOCATIONVIEWER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.DelCusViewer"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.DELCUSVIEWER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.NotificationReceiverActivity1"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.NOTIFICATIONRECEIVERACTIVITY1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.NIRR.jenasena.ReplocHistory"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.REPLOCHISTORY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.NIRR.jenasena.RepLocMenu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.REPLOCMENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name="com.NIRR.jenasena.HistoryReport"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.HISTORYREPORT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+           <activity
+            android:name="com.NIRR.jenasena.Report"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.REPORT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.NIRR.jenasena.UpdaterServiceManager1"
+            android:enabled="true" />
+        <service
+            android:name="com.NIRR.jenasena.MyTestService"
+            android:exported="false" />
+        <service android:enabled="true" android:name=".RepLocBackgroundService" />
+        
+    </application>
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+</manifest>

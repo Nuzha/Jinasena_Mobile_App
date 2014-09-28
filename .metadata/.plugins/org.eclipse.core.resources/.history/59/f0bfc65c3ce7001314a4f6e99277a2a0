@@ -1,0 +1,562 @@
+package com.NIRR.jenasena;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.annotation.TargetApi;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Build;
+
+public class DBCreater {
+	
+	
+	
+	public static final String Key_customer_Id       = "_id";
+	public static final String Key_customer_CId      = "cus_id";
+	public static final String Key_customer_Name     = "customer_name";
+	public static final String Key_customer_Shop     = "customer_shop";
+	public static final String Key_customer_Rep      = "customer_rep";
+	public static final String Key_customer_Delear   = "customer_delear";
+	public static final String Key_customer_Location = "customer_location";
+	public static final String Key_customer_Phon     = "customer_phon";
+	public static final String Key_customer_Email    = "customer_email";
+	public static final String Key_customer_Address  = "customer_address";
+	public static final String Key_customer_state    = "customer_state";
+	
+	public static final String Key_rep_Id            = "_id";
+	public static final String Key_rep_RId           = "rep_id";
+	public static final String Key_rep_Username      = "rep_uname";
+	public static final String Key_rep_Password      = "rep_pwd";
+	public static final String Key_rep_Name          = "rep_name";
+	public static final String Key_rep_Phon          = "rep_phon";
+	public static final String Key_rep_Email         = "rep_email";
+	public static final String Key_rep_Address       = "rep_address";
+	public static final String Key_rep_Delear        = "rep_delear";
+	public static final String Key_rep_state         = "rep_state";
+	
+	public static final String Key_delear_Id         = "_id";
+	public static final String Key_delear_DId        = "del_id";
+	public static final String Key_delear_Username   = "del_uname";
+	public static final String Key_delear_Password   = "del_pwd";
+	public static final String Key_delear_Name       = "del_name";
+	public static final String Key_delear_Phon       = "del_phon";
+	public static final String Key_delear_Email      = "del_email";
+	public static final String Key_delear_Address    = "del_address";
+	public static final String Key_delear_Company    = "del_company";
+	public static final String Key_delear_state      = "del_state";
+	
+	public static final String Key_repS_tab_id	               ="_id";
+	public static final String Key_repS_rep_id				   ="repS_rep_id";
+	public static final String Key_repS_del_id				   ="repS_del_id";
+	public static final String Key_repS_item_name			   ="repS_item_name";
+	public static final String Key_repS_assigned_qty		   ="repS_assigned_qty";
+	public static final String Key_repS_available_qty		   ="repS_available_qty";
+	public static final String Key_repS_assigned_date		   ="repS_assigned_date";
+	public static final String Key_repS_due_date			   ="repS_due_date";
+	public static final String Key_repS_paid_date			   ="repS_paid_date";
+	public static final String Key_repS_unit_price             ="repS_unit_price";
+	
+	public static final String  Key_delS_tbl_id			       ="_id";
+	public static final String Key_delS_del_id			       ="delS_del_id";
+	public static final String Key_delS_rep_id			       ="repS_rep_id";/////chnge nme
+	public static final String Key_delS_del_item_name	       ="delS_del_item_name";
+	public static final String Key_delS_unit_price		       ="delS_unit_price";
+	public static final String Key_delS_purchased_qty	       ="delS_purchased_qty";
+	public static final String Key_delS_available_qty	       ="delS_available_qty";
+	public static final String Key_delS_purchased_date	       ="delS_purchased_date";
+	public static final String Key_delS_due_date		       ="delS_due_date";
+	public static final String Key_delS_paid_date		       ="delS_paid_date";
+	public static final String Key_deltorepS_assigned_qty      ="deltorepS_assigned_qty";
+	public static final String Key_delS_updated_assigned_qty   ="delS_updated_qty";
+	
+	public static final String Key_Cart_tab_id				   ="_id";
+	public static final String Key_Cart_rep_id   			   ="Cart_rep_id";
+	public static final String Key_Cart_cus_id   			   ="Cart_cus_id";
+	public static final String Key_Cart_item_name			   ="Cart_item_name";
+	public static final String Key_Cart_sold_quantity		   ="Cart_sold_qty";
+	public static final String Key_Cart_unit_price             ="Cart_unit_price";
+	public static final String Key_Cart_total_price   		   ="Cart_total_price";
+	public static final String Key_Cart_issued_date   		   ="Cart_issued_date";
+	public static final String Key_Cart_due_date   		       ="Cart_due_date";
+	public static final String Key_Cart_paid_date  		       ="Cart_paid_date";
+	
+	private static final String DATABASE_NAME           ="Jinasena";
+	private static final String DATABASE_TABLE_CUSTOMER ="Customer";
+	private static final String DATABASE_TABLE_REP      ="Rep";
+	private static final String DATABASE_TABLE_DELEAR   ="DELEAR";
+	private static final String DATABASE_TABLE_REP_STOCK    ="Rep_Stock"; 
+	private static final String DATABASE_TABLE_DEALER_STOCK ="Del_Stock";
+	private static final String DATABASE_TABLE_CART         ="Cart";
+	private static final Integer DATABASE_VERSION       =1;
+	
+	private DbHelper ourHelper;
+	private final Context ourContext;
+	private SQLiteDatabase ourDatabase;
+	private static final String tag ="DBCreater";
+	
+	private static class DbHelper extends SQLiteOpenHelper{
+
+		public DbHelper(Context context) {
+			super(context, DATABASE_NAME, null, DATABASE_VERSION);
+			// TODO Auto-generated constructor stub
+		}
+		@Override
+		public void onCreate(SQLiteDatabase db) {
+			// TODO Auto-generated method stub
+			db.execSQL("CREATE TABLE IF NOT EXISTS " +  DATABASE_TABLE_CUSTOMER + " ("+
+					Key_customer_Id + " INTEGER  PRIMARY KEY AUTOINCREMENT, " +
+					Key_customer_CId + " TEXT NOT NULL, " + 
+					Key_customer_Name + " TEXT NOT NULL, " + 
+					Key_customer_Shop + " TEXT NOT NULL, " + 
+					Key_customer_Location + " TEXT NOT NULL, " + 
+					Key_customer_Phon + " TEXT NOT NULL, " + 
+					Key_customer_Email + " TEXT NOT NULL, " +
+					Key_customer_Address + " TEXT NOT NULL, " +
+					Key_customer_Rep + " TEXT NOT NULL, " +
+					Key_customer_Delear + " TEXT NOT NULL, " +
+					Key_customer_state + " TEXT NOT NULL ); "
+							);
+			db.execSQL("CREATE TABLE IF NOT EXISTS " +  DATABASE_TABLE_REP + " ("+
+					Key_rep_Id + " INTEGER  PRIMARY KEY AUTOINCREMENT, " +
+					Key_rep_RId + " TEXT NOT NULL, " + 
+					Key_rep_Username + " TEXT NOT NULL, " + 
+					Key_rep_Password + " TEXT NOT NULL, " +
+					Key_rep_Name + " TEXT NOT NULL, " +
+					Key_rep_Phon + " TEXT NOT NULL, " + 
+					Key_rep_Email + " TEXT NOT NULL, " +
+					Key_rep_Address + " TEXT NOT NULL, " +
+					Key_rep_Delear + " TEXT NOT NULL, " +
+					Key_rep_state + " TEXT NOT NULL ); "
+							);
+			db.execSQL("CREATE TABLE IF NOT EXISTS " +  DATABASE_TABLE_DELEAR + " ("+
+					Key_delear_Id + " INTEGER  PRIMARY KEY AUTOINCREMENT, " +
+					Key_delear_DId + " TEXT NOT NULL, " + 
+					Key_delear_Username + " TEXT NOT NULL, " + 
+					Key_delear_Password + " TEXT NOT NULL, " +
+					Key_delear_Name + " TEXT NOT NULL, " +
+					Key_delear_Phon + " TEXT NOT NULL, " + 
+					Key_delear_Email + " TEXT NOT NULL, " +
+					Key_delear_Address + " TEXT NOT NULL, " +
+					Key_delear_Company + " TEXT NOT NULL, " +
+					Key_delear_state + " TEXT NOT NULL ); "
+							);
+			
+			
+		}
+
+		@Override
+		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+			// TODO Auto-generated method stub
+			db.execSQL("DROP TABLE IF EXISTS "+ DATABASE_TABLE_CUSTOMER);
+			onCreate(db);
+			db.execSQL("DROP TABLE IF EXISTS "+ DATABASE_TABLE_REP);
+			onCreate(db);
+			db.execSQL("DROP TABLE IF EXISTS "+ DATABASE_TABLE_DELEAR);
+			onCreate(db);
+			
+		}
+		
+	}
+	public DBCreater(Context c){
+		ourContext = c;
+	}
+	//make the connection to open db for writing purpose
+		public DBCreater open() throws SQLException {
+			ourHelper= new DbHelper(ourContext);
+			ourDatabase= ourHelper.getWritableDatabase();
+			return this;
+		}
+		
+		//make the connection to open db for reding purpose
+		public DBCreater openforread() throws SQLException {
+			ourHelper= new DbHelper(ourContext);
+			ourDatabase= ourHelper.getReadableDatabase();
+			return this;
+		}
+		
+		//close the connection
+		public void close() {
+			ourHelper.close();
+		}
+		public int countrep(){
+			String countQuery = "SELECT  * FROM " + DATABASE_TABLE_REP;
+		    Cursor cursor = ourDatabase.rawQuery(countQuery, null);
+		    int count=cursor.getCount();
+		    return count ;
+		}
+		public int countdel(){
+			String countQuery = "SELECT  * FROM " + DATABASE_TABLE_DELEAR;
+		    Cursor cursor = ourDatabase.rawQuery(countQuery, null);
+		    int count=cursor.getCount();
+		    return count ;
+		}
+		public long createRepentry(String username,String pwd,String name,String del,String rid,String phon,String Email,String Address){
+			ContentValues cv = new ContentValues();
+			cv.put(Key_rep_RId,rid);
+			cv.put(Key_rep_Username,username);
+			cv.put(Key_rep_Password,pwd);
+			cv.put(Key_rep_Name,name);
+			cv.put(Key_rep_Phon, phon);
+			cv.put(Key_rep_Email, Email);
+			cv.put(Key_rep_Address, Address);
+			cv.put(Key_rep_state, "YES");
+			cv.put(Key_rep_Delear,del);
+			return ourDatabase.insert(DATABASE_TABLE_REP, null, cv);
+			
+		}
+//*****************************************************************************************************************
+		public long createDeler(String id,String username,String pass,String name,String phon,String Email,String Address,String cmp){
+			ContentValues cv = new ContentValues();
+			cv.put(Key_delear_DId,id);
+			cv.put(Key_delear_Username,username);
+			cv.put(Key_delear_Password,pass);
+			cv.put(Key_delear_Name,name);
+			cv.put(Key_delear_Phon, phon);
+			cv.put(Key_delear_Email, Email);
+			cv.put(Key_delear_Address, Address);
+			cv.put(Key_delear_state, "YES");
+			cv.put(Key_delear_Company,cmp);
+			return ourDatabase.insert(DATABASE_TABLE_DELEAR, null, cv);
+		}
+		public long createrepstock(String rep,String del,String item,int assignqty,int avblqty,String assdate,String dudate,String paddate,double unt_price){
+			ContentValues cv = new ContentValues();
+			cv.put(Key_repS_rep_id,rep);
+			cv.put(Key_repS_del_id,del);
+			cv.put(Key_repS_item_name,item);
+			cv.put(Key_repS_assigned_qty,assignqty);
+			cv.put(Key_repS_available_qty,avblqty);
+			cv.put(Key_repS_assigned_date,assdate);
+			cv.put(Key_repS_due_date,dudate);
+			cv.put(Key_repS_paid_date,paddate);
+			cv.put(Key_repS_unit_price, unt_price);
+			return ourDatabase.insert(DATABASE_TABLE_REP_STOCK, null, cv);
+		}
+		public long createdelstock(String del,String delrep,String itemname,Double price,Integer pqty,Integer aqty,String purdate,String dudate,String paddate,Integer delaqty,Integer updatedaqty){
+			ContentValues cv = new ContentValues();
+			cv.put(Key_delS_del_id,del);
+			cv.put(Key_delS_rep_id,delrep);
+			cv.put(Key_delS_del_item_name,itemname);
+			cv.put(Key_delS_unit_price,price);
+			cv.put(Key_delS_purchased_qty,pqty);
+			cv.put(Key_delS_available_qty,aqty);
+			cv.put(Key_delS_purchased_date,purdate);
+			cv.put(Key_delS_due_date,dudate);
+			cv.put(Key_delS_paid_date,paddate);
+			cv.put(Key_deltorepS_assigned_qty,delaqty);
+			cv.put(Key_delS_updated_assigned_qty,updatedaqty);
+			return ourDatabase.insert(DATABASE_TABLE_DEALER_STOCK, null, cv);
+		}
+		
+		public long createCart(String rid,String cusid,String itemName,int qty,double unit_price,double tprice,String idate,String ddate,String pdate){
+			ContentValues cv = new ContentValues();
+			//cv.put(Key_Cart_cart_id,crtid);
+			cv.put(Key_Cart_rep_id,rid);
+			cv.put(Key_Cart_cus_id,cusid);
+			cv.put(Key_Cart_item_name, itemName);
+			cv.put(Key_Cart_sold_quantity, qty);
+			cv.put(Key_Cart_unit_price, unit_price);
+			cv.put(Key_Cart_total_price,tprice);
+			cv.put(Key_Cart_issued_date,idate);
+			cv.put(Key_Cart_due_date,ddate);
+			cv.put(Key_Cart_paid_date,pdate);
+			return ourDatabase.insert(DATABASE_TABLE_CART, null, cv);
+		}
+		
+//*************************************************************************************************************************
+		public long createEntry(String scustemername, String sshopname, String slocation,String semail, String sphone,String saddress,String srep,String sloger,String sender) {
+			// TODO Auto-generated method stub
+			ContentValues cv = new ContentValues();
+			String countQuery = "select _id from Customer where cus_id like '%"+sender+"%'";
+		    Cursor cursor = ourDatabase.rawQuery(countQuery, null);
+		    int count=cursor.getCount();
+		    count++;
+		    String cus=srep+"Cus"+count;
+		    cv.put(Key_customer_CId, cus);
+			cv.put(Key_customer_Name, scustemername);
+			cv.put(Key_customer_Shop, sshopname);
+			cv.put(Key_customer_Location, slocation);
+			cv.put(Key_customer_Phon, sphone);
+			cv.put(Key_customer_Email, semail);
+			cv.put(Key_customer_Address, saddress);
+			cv.put(Key_customer_state, "YES");
+			cv.put(Key_customer_Rep, srep);
+			cv.put(Key_customer_Delear, sloger);
+			return ourDatabase.insert(DATABASE_TABLE_CUSTOMER, null, cv);
+			
+		}
+		public Cursor getunamebypwd(String pwd)throws SQLException{
+			Cursor mCursor = null;
+			mCursor =ourDatabase.query(true,DATABASE_TABLE_DELEAR,new String[]{ Key_delear_Username }, Key_delear_Password+ "=?",
+					new String[]{pwd},null, null, null, null);
+			if(mCursor != null  ){
+				mCursor.moveToFirst();
+			}
+			return mCursor;
+		}
+		public Cursor getunamebypwdrep(String pwd)throws SQLException{
+			Cursor mCursor = null;
+			mCursor =ourDatabase.query(true,DATABASE_TABLE_REP,new String[]{ Key_rep_Username }, Key_rep_Password+ "=?",
+					new String[]{pwd},null, null, null, null);
+			if(mCursor != null  ){
+				mCursor.moveToFirst();
+			}
+			return mCursor;
+		}
+		public String getuid(String pwd)throws SQLException{
+			Cursor mCursor = null;
+			mCursor =ourDatabase.query(true,DATABASE_TABLE_DELEAR,new String[]{ Key_delear_DId }, Key_delear_Password+ "=?",
+					new String[]{pwd},null, null, null, null);
+			if(mCursor != null){
+				mCursor.moveToFirst();
+			}
+			return mCursor.getString(0);
+		}
+		
+		public Cursor fetchallcustomercompany(String delear) {
+			
+			 String selectQuery = "select  _id,customer_shop,customer_name from Customer where customer_delear= '"+delear+"'" ;
+		//	 String selectQuery = "select  _id,customer_shop,customer_location,customer_phon,customer_email,customer_address from Customer where customer_delear= '"+delear+"'" ;     
+		        SQLiteDatabase db = ourHelper.getReadableDatabase();
+		        Cursor mCursor = db.rawQuery(selectQuery, null);
+			if(mCursor != null){
+				mCursor.moveToFirst();
+			}
+			return mCursor;
+		}
+		public Cursor fetchallrep(String delear) {
+			
+			 String selectQuery = "select  _id,rep_name from REP where rep_delear= '"+delear+"'" ;
+		//	 String selectQuery = "select  _id,customer_shop,customer_location,customer_phon,customer_email,customer_address from Customer where customer_delear= '"+delear+"'" ;     
+		        SQLiteDatabase db = ourHelper.getReadableDatabase();
+		        Cursor mCursor = db.rawQuery(selectQuery, null);
+			if(mCursor != null){
+				mCursor.moveToFirst();
+			}
+			return mCursor;
+		}
+		public Cursor fetchallcustomercompanyfordelear(String rep) {
+			
+			 String selectQuery = "select  _id,customer_shop,customer_name from Customer where customer_rep= '"+rep+"'" ;
+		//	 String selectQuery = "select  _id,customer_shop,customer_location,customer_phon,customer_email,customer_address from Customer where customer_delear= '"+delear+"'" ;     
+		        SQLiteDatabase db = ourHelper.getReadableDatabase();
+		        Cursor mCursor = db.rawQuery(selectQuery, null);
+			if(mCursor != null){
+				mCursor.moveToFirst();
+			}
+			return mCursor;
+		}
+		
+		public Cursor fetchallcustomerdata(String delear) {
+			
+			 String selectQuery = "select  cus_id,customer_location,customer_phon,customer_email,customer_address,customer_name from Customer where customer_shop= '"+delear+"'" ;     
+		        SQLiteDatabase db = ourHelper.getReadableDatabase();
+		        Cursor mCursor = db.rawQuery(selectQuery, null);
+			if(mCursor != null){
+				mCursor.moveToFirst();
+			}
+			return mCursor;
+		}
+		public Cursor fetchallrepdata(String delear) {
+			
+			 String selectQuery = "select  rep_id,rep_phon,rep_email,rep_address,rep_name from REP where rep_name= '"+delear+"'" ;     
+		        SQLiteDatabase db = ourHelper.getReadableDatabase();
+		        Cursor mCursor = db.rawQuery(selectQuery, null);
+			if(mCursor != null){
+				mCursor.moveToFirst();
+			}
+			return mCursor;
+		}
+		
+		public Cursor Delearemail(String delear) {
+			
+			 String selectQuery = "select  del_email from DELEAR where del_id = '"+delear+"'" ;     
+		        SQLiteDatabase db = ourHelper.getReadableDatabase();
+		        Cursor mCursor = db.rawQuery(selectQuery, null);
+			if(mCursor != null){
+				mCursor.moveToFirst();
+			}
+			return mCursor;
+		}
+		public Cursor Repemail(String delear) {
+			
+			 String selectQuery = "select  rep_email from REP where rep_id = '"+delear+"'" ;     
+		        SQLiteDatabase db = ourHelper.getReadableDatabase();
+		        Cursor mCursor = db.rawQuery(selectQuery, null);
+			if(mCursor != null){
+				mCursor.moveToFirst();
+			}
+			return mCursor;
+		}
+		
+		public String getuidrep(String pwd)throws SQLException{
+			Cursor mCursor = null;
+			mCursor =ourDatabase.query(true,DATABASE_TABLE_REP,new String[]{ Key_rep_RId }, Key_rep_Password+ "=?",
+					new String[]{pwd},null, null, null, null);
+			if(mCursor != null){
+				mCursor.moveToFirst();
+			}
+			return mCursor.getString(0);
+		}
+		public List<String> getAllLabels(String s1) {
+			// TODO Auto-generated method stub
+			List<String> labels = new ArrayList<String>();
+	        
+	        // Select All Query
+	        String selectQuery = "SELECT  * FROM  Rep where rep_delear = '"+s1+"'" ;
+	      
+	        SQLiteDatabase db = ourHelper.getReadableDatabase();
+	        Cursor cursor = db.rawQuery(selectQuery, null);
+	      
+	        // looping through all rows and adding to list
+	        if (cursor.moveToFirst()) {
+	            do {
+	                labels.add(cursor.getString(1));
+	            } while (cursor.moveToNext());
+	        }
+	         
+	        // closing connection
+	        cursor.close();
+	        db.close();
+	         
+	        // returning lables
+	        return labels;
+		}
+		public Cursor fetchcustomerbynamelike(String inputtext,String delear) {
+			// TODO Auto-generated method stub
+			Cursor mycursor =null;
+		       
+			
+			if(inputtext == null||inputtext.length()==0){
+			
+				String getter = "select  cus_id,_id,customer_location,customer_phon,customer_shop,customer_email,customer_address,customer_name from Customer where customer_delear= '"+delear+"'" ;
+				SQLiteDatabase db = ourHelper.getReadableDatabase();
+				 mycursor = db.rawQuery(getter, null);
+			}
+			else{
+				String getter = "select  cus_id,_id,customer_location,customer_phon,customer_shop,customer_email,customer_address,customer_name from Customer where customer_delear= '"+delear+"' AND customer_shop like '%"+inputtext+"%'";
+				SQLiteDatabase db = ourHelper.getReadableDatabase();
+				 mycursor = db.rawQuery(getter, null);
+			}
+			if(mycursor != null){
+				mycursor.moveToFirst();
+			}
+			return mycursor;
+		}
+		
+		public Cursor fetchrepbynamelike(String inputtext,String delear) {
+			// TODO Auto-generated method stub
+			Cursor mycursor =null;
+		       
+			
+			if(inputtext == null||inputtext.length()==0){
+			
+				String getter = "select  rep_id,_id,rep_phon,rep_email,rep_address,rep_name from REP where rep_delear= '"+delear+"'" ;
+				SQLiteDatabase db = ourHelper.getReadableDatabase();
+				 mycursor = db.rawQuery(getter, null);
+			}
+			else{
+				String getter = "select  rep_id,_id,rep_phon,rep_email,rep_address,rep_name from REP where rep_delear= '"+delear+"' AND rep_name like '%"+inputtext+"%'";
+				SQLiteDatabase db = ourHelper.getReadableDatabase();
+				 mycursor = db.rawQuery(getter, null);
+			}
+			if(mycursor != null){
+				mycursor.moveToFirst();
+			}
+			return mycursor;
+		}
+		
+		public Cursor repfetchcustomerbynamelike(String inputtext,String delear) {
+			// TODO Auto-generated method stub
+			Cursor mycursor =null;
+		       
+			
+			if(inputtext == null||inputtext.length()==0){
+			
+				String getter = "select  cus_id,_id,customer_location,customer_phon,customer_shop,customer_email,customer_address,customer_name from Customer where customer_rep= '"+delear+"'" ;
+				SQLiteDatabase db = ourHelper.getReadableDatabase();
+				 mycursor = db.rawQuery(getter, null);
+			}
+			else{
+				String getter = "select  cus_id,_id,customer_location,customer_phon,customer_shop,customer_email,customer_address,customer_name from Customer where customer_rep= '"+delear+"' AND customer_shop like '%"+inputtext+"%'";
+				SQLiteDatabase db = ourHelper.getReadableDatabase();
+				 mycursor = db.rawQuery(getter, null);
+			}
+			if(mycursor != null){
+				mycursor.moveToFirst();
+			}
+			return mycursor;
+		}
+		public String getCustomerDataForDELPdf(String s1) {
+			// TODO Auto-generated method stub
+			SQLiteDatabase db = ourHelper.getReadableDatabase();
+			
+			 String selectQuery = "select  cus_id,_id,customer_location,customer_phon,customer_shop,customer_email,customer_address,customer_name,customer_rep from Customer where customer_delear= '"+s1+"'" ; 
+			Cursor c = ourDatabase.rawQuery(selectQuery, null);
+			 String result="";
+			 int iid=c.getColumnIndex(Key_customer_CId);
+			 int iname=c.getColumnIndex(Key_customer_Name);
+			 int iaddress=c.getColumnIndex(Key_customer_Address);
+			 int icmp=c.getColumnIndex(Key_customer_Shop);
+			 int icity=c.getColumnIndex(Key_customer_Location);
+			 int iemail=c.getColumnIndex(Key_customer_Email);
+			 int iphon=c.getColumnIndex(Key_customer_Phon);
+			 int irep=c.getColumnIndex(Key_customer_Rep);
+			 for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
+				 result=result+c.getString(iid)+"*"+c.getString(icmp)+"*"+c.getString(iname)+"*"+c.getString(icity)+"*"+c.getString(iaddress)+"*"+c.getString(iemail)+"*"+c.getString(iphon)+"*"+c.getString(irep)+"*";
+			 }
+			 db.close();
+			 return result;
+		}
+		public String getCustomerDataForRepPdf(String s1) {
+			// TODO Auto-generated method stub
+			SQLiteDatabase db = ourHelper.getReadableDatabase();
+			
+			 String selectQuery = "select  cus_id,_id,customer_location,customer_phon,customer_shop,customer_email,customer_address,customer_name,customer_rep from Customer where customer_rep= '"+s1+"'" ; 
+			Cursor c = ourDatabase.rawQuery(selectQuery, null);
+			 String result="";
+			 int iid=c.getColumnIndex(Key_customer_CId);
+			 int iname=c.getColumnIndex(Key_customer_Name);
+			 int iaddress=c.getColumnIndex(Key_customer_Address);
+			 int icmp=c.getColumnIndex(Key_customer_Shop);
+			 int icity=c.getColumnIndex(Key_customer_Location);
+			 int iemail=c.getColumnIndex(Key_customer_Email);
+			 int iphon=c.getColumnIndex(Key_customer_Phon);
+			 for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
+				 result=result+c.getString(iid)+"*"+c.getString(icmp)+"*"+c.getString(iname)+"*"+c.getString(icity)+"*"+c.getString(iaddress)+"*"+c.getString(iemail)+"*"+c.getString(iphon)+"*";
+			 }
+			 db.close();
+			 return result;
+		}
+		public String getRepDataForDELPdf(String s1) {
+			// TODO Auto-generated method stub
+			SQLiteDatabase db = ourHelper.getReadableDatabase();
+			
+			 String selectQuery = "select  rep_id,_id,rep_phon,rep_email,rep_address,rep_name from REP where rep_delear= 'Del01'"  ; 
+			Cursor c = ourDatabase.rawQuery(selectQuery, null);
+			 String result="";
+			 for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
+				 result=result+c.getString(0)+"*"+c.getString(5)+"*"+c.getString(4)+"*"+c.getString(3)+"*"+c.getString(2)+"*";
+			 }
+			 db.close();
+			 return result;
+		}
+		public Cursor getrepnameandtep(String rep) {
+			
+			 String selectQuery = "select  _id,rep_name,rep_phon from REP where rep_id= '"+rep+"'" ;
+		//	 String selectQuery = "select  _id,customer_shop,customer_location,customer_phon,customer_email,customer_address from Customer where customer_delear= '"+delear+"'" ;     
+		        SQLiteDatabase db = ourHelper.getReadableDatabase();
+		        Cursor mCursor = db.rawQuery(selectQuery, null);
+			if(mCursor != null){
+				mCursor.moveToFirst();
+			}
+			return mCursor;
+		}
+	
+
+}

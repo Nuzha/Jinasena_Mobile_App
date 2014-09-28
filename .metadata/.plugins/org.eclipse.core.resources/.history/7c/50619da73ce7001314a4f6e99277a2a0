@@ -1,0 +1,79 @@
+package com.NIRR.jenasena;
+
+import java.util.List;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemSelectedListener;
+
+public class MainDelCustomerProformance extends Activity  implements OnItemSelectedListener{
+
+	TextView e1,id,name;
+	Button chart;
+	ImageButton call;
+	Spinner sp;
+	String label,tp;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.cd_main_customerproformance);
+		Intent intent=getIntent();
+	    String s1=intent.getStringExtra(C_Customer.packagename);
+	    e1=(TextView)findViewById(R.id.tv_cdMainCustomerProformance_id_Isuru);
+	    id=(TextView)findViewById(R.id.tv_cdMainCustomerProformance_cusid_Isuru);
+	    name=(TextView)findViewById(R.id.tv_cdMainCustomerProformance_name_Isuru);
+	    chart=(Button)findViewById(R.id.bt_cdMainCustomerProformance_chart_Isuru);
+	    call=(ImageButton)findViewById(R.id.bt_cdMainCustomerProformance_call_Isuru);
+	    sp=(Spinner)findViewById(R.id.sp_cdMainCustomerProformance_shop_Isuru);
+	    loadshopname(s1);
+	    e1.setText(s1);
+	}
+	private void loadshopname(String s1) {
+		// TODO Auto-generated method stub
+		DBCreater entry = new DBCreater(MainDelCustomerProformance.this);
+		entry.openforread();
+		List<String> lables = entry.getshop(s1);
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, lables);
+		// Drop down layout style - list view with radio button
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+ 
+        // attaching data adapter to spinner
+        sp.setAdapter(dataAdapter);
+       entry.close();
+		
+	}
+	@Override
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
+			long arg3) {
+		// TODO Auto-generated method stub
+		 label = arg0.getItemAtPosition(arg2).toString();
+		 DBCreater entry = new DBCreater(MainDelCustomerProformance.this);
+		entry.openforread();
+		 String rep = sp.getSelectedItem().toString();
+		 Cursor mcuresr= entry.getcusnameandtep(rep);
+			tp=mcuresr.getString(3);
+			name.setText(mcuresr.getString(2));
+			id.setText(mcuresr.getString(1));
+		 
+	        // Showing selected spinner item
+	     Toast.makeText(arg0.getContext(), "You selected: " + label,
+	                Toast.LENGTH_LONG).show();
+		
+	}
+	@Override
+	public void onNothingSelected(AdapterView<?> arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+}

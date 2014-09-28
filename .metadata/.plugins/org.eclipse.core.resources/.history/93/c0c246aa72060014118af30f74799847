@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ViewInvoice" >
+
+    <ListView
+        android:id="@+id/lvinvoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvinvcttl"
+        android:layout_alignLeft="@+id/tvtitlerepid"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvtitleqty" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/tvtitletotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lvinvoice"
+        android:layout_alignParentRight="true"
+        android:text="Total"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvinvcttl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bConfrm"
+        android:layout_toLeftOf="@+id/tvtitletotal"
+        android:text="Total"
+        android:textColor="@color/loginText" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Invoice Id      :"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="#ffee28"
+        />
+
+    <TextView
+        android:id="@+id/tvtitledate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvtitlecusid"
+        android:layout_below="@+id/tvtitlecusid"
+        android:text="Date            :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvtitlerepid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:text="Logged in as :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <Button
+        android:id="@+id/btselectdate"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvcusId"
+        android:text="Select date"
+        android:visibility="gone"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvtitlecusid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvtitlerepid"
+        android:layout_below="@+id/tvtitlerepid"
+        android:text="Customer Id  :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <Button
+        android:id="@+id/bConfrm"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/tvinvoid"
+        android:text="Confirm Invoice" />
+
+    <TextView
+        android:id="@+id/tvtitleitemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lvinvoice"
+        android:layout_below="@+id/tvtitledate"
+        android:text="Item Name"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvtitleqty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvtitleitemName"
+        android:layout_alignBottom="@+id/tvtitleitemName"
+        android:layout_toRightOf="@+id/tvtitledate"
+        android:text="Quantity"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvinvoid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvrepId"
+        android:layout_toLeftOf="@+id/tvinvcttl"
+        android:text="invoiceId"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvrepId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvtitlecusid"
+        android:layout_alignLeft="@+id/tvinvoid"
+        android:text="repId"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvcusId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvtitledate"
+        android:layout_alignLeft="@+id/tvrepId"
+        android:text="cusId"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvtitleqty"
+        android:layout_alignLeft="@+id/tvcusId"
+        android:text="Date cme"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvtitleinvoicetotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bConfrm"
+        android:layout_toRightOf="@+id/tvtitleitemName"
+        android:text="Total of the invoice"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvtitleuprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lvinvoice"
+        android:layout_toRightOf="@+id/tvtitleinvoicetotal"
+        android:text="Unit Price"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Jenasena/res/layout/rephistory.xml&apos; to &apos;rephistorymap.xml&apos;" description="Rename resource &apos;rephistory.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="res/layout/rephistory.xml" name="rephistorymap.xml" stamp="1409454851683" updateReferences="true"/>
+</session>
