@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".ReturnItemsEmail" >
+
+    <TextView
+        android:id="@+id/tv_rie_loggedlbl_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="You are logged in as:"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_rie_logger_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/tv_rie_loggedlbl_r"
+        android:text="TextView"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_rie_tolbl_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_rie_loggedlbl_r"
+        android:layout_marginTop="68dp"
+        android:text="To:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <EditText
+        android:id="@+id/etv_rie_to_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_rie_tolbl_r"
+        android:ems="10"
+        android:hint="Receiver&apos;s email address"
+        android:text="Jinasena@gmail.com" />
+
+    <TextView
+        android:id="@+id/tv_rie_subject_lbl_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/etv_rie_to_r"
+        android:layout_marginTop="21dp"
+        android:text="Subject"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <Button
+        android:id="@+id/btn_rie_sendemail_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:text="Send Email" />
+
+      <TextView
+          android:id="@+id/tv_rie_contentlbl_r"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/etv_rie_subject_r"
+          android:layout_marginTop="19dp"
+          android:text="Content"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="#ffee28" />
+
+      <EditText
+          android:id="@+id/etv_rie_subject_r"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:ems="10"
+          android:hint="Subject of the email"
+          android:text="Returned Items" />
+
+      <TextView
+          android:id="@+id/etv_rie_content_r"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/btn_rie_sendemail_r"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/tv_rie_contentlbl_r"
+          android:layout_marginTop="16dp"
+          android:ems="10"
+          android:hint="Content of the mail" />
+
+      <TextView
+          android:id="@+id/tv_rie_labeltitle_rosh"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/tv_rie_loggedlbl_r"
+          android:layout_marginTop="25dp"
+          android:text="                  Compose an Email"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="#ffee28" />
+
+</RelativeLayout>

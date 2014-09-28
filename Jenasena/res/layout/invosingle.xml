@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_Title_cusId_invoiceSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Customer Id"
+        android:textColor="@color/white"
+         />
+
+    <TextView
+        android:id="@+id/tv_Title_invoiceId_invoiceSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_Title_cusId_invoiceSingle"
+        android:text="Invoice Id" 
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/tv_invoice_id_invoiceSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_Title_invoiceId_invoiceSingle"
+        android:layout_alignBottom="@+id/tv_Title_invoiceId_invoiceSingle"
+        android:layout_alignLeft="@+id/tv_cusID_invoiceSingle"
+        android:text="Invo" />
+
+    <TextView
+        android:id="@+id/tv_Title_invoiced_date_invoiceSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_Title_invoiceId_invoiceSingle"
+        android:text="Invoiced Date" 
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/tv_Title_total_amount_invoiceSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_Title_invoiced_date_invoiceSingle"
+        android:text="Total Amount"
+        android:textColor="@color/white"
+         />
+
+    <TextView
+        android:id="@+id/tv_Tiltle_paidAmount_invoiceSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_Title_total_amount_invoiceSingle"
+        android:text="Paid Amount"
+        android:textColor="@color/white"
+         />
+
+    <TextView
+        android:id="@+id/tv_Titile_amountToPaid_invoiceSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_Tiltle_paidAmount_invoiceSingle"
+        android:text="Amount to be paid" 
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/tv_cusID_invoiceSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_invoice_id_invoiceSingle"
+        android:layout_marginLeft="41dp"
+        android:layout_toRightOf="@+id/tv_Titile_amountToPaid_invoiceSingle"
+        android:text="DelRepCus" />
+
+    <TextView
+        android:id="@+id/tv_total_amount_invoiceSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_invoice_id_invoiceSingle"
+        android:layout_below="@+id/tv_Title_invoiced_date_invoiceSingle"
+        android:text="amount" />
+
+    <TextView
+        android:id="@+id/tv_invoiced_date_invoiceSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_invoice_id_invoiceSingle"
+        android:layout_below="@+id/tv_invoice_id_invoiceSingle"
+        android:text="date" />
+
+    <TextView
+        android:id="@+id/tv_amountTobePaid_invoiceSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_Titile_amountToPaid_invoiceSingle"
+        android:layout_alignBottom="@+id/tv_Titile_amountToPaid_invoiceSingle"
+        android:layout_alignLeft="@+id/tv_paid_amount_invoiceSingle"
+        android:text="amounttobepaid" />
+
+    <TextView
+        android:id="@+id/tv_paid_amount_invoiceSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_total_amount_invoiceSingle"
+        android:layout_below="@+id/tv_total_amount_invoiceSingle"
+        android:text="paidamount" />
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ViewAvailableStock" >
+
+    <TextView
+        android:id="@+id/tv_title_repid_View_Available_Stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Logged in as: "
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_title_avail_stck_View_Available_Stock"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_alignBaseline="@+id/tv_title_assigned_stock_View_Available_Stock"
+        android:layout_alignBottom="@+id/tv_title_assigned_stock_View_Available_Stock"
+        android:layout_marginLeft="39dp"
+        android:layout_toRightOf="@+id/tv_title_assigned_stock_View_Available_Stock"
+        android:text="Available Quantity"
+        android:textColor="#ffee28"
+         />
+
+    <ListView
+        android:id="@+id/lv_view_available_stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_title_itemName_View_Available_Stock"
+        android:layout_below="@+id/tv_title_itemName_View_Available_Stock" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_title_itemName_View_Available_Stock"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/tv_title_repid_View_Available_Stock"
+        android:layout_below="@+id/tv_title_repid_View_Available_Stock"
+        android:layout_marginTop="24dp"
+        android:text="Item Name"
+        android:textColor="#ffee28"
+         />
+
+    <TextView
+        android:id="@+id/tv_repid_View_Available_Stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_title_itemName_View_Available_Stock"
+        android:layout_alignRight="@+id/lv_view_available_stock"
+        android:layout_toRightOf="@+id/tv_title_repid_View_Available_Stock"
+        android:text="Del1Rep1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_title_assigned_stock_View_Available_Stock"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/lv_view_available_stock"
+        android:layout_alignLeft="@+id/tv_repid_View_Available_Stock"
+        android:layout_marginLeft="17dp"
+        android:text="Assigned Quantity"
+        android:textColor="#ffee28" />
+
+</RelativeLayout>

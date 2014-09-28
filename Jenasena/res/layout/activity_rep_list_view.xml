@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".RepListView" >
+
+    <TextView
+        android:id="@+id/rtv_reptext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rtv_replist"
+        android:layout_alignBottom="@+id/rtv_replist"
+        android:layout_alignParentLeft="true"
+        android:text="You are logged in as "
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/rtv_replist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="27dp"
+        android:layout_toRightOf="@+id/rtv_reptext"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="#ffee28"/>
+
+    <ListView
+        android:id="@+id/rlv_replist"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" >
+    </ListView>
+
+    <Button
+        android:id="@+id/r_ba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="63dp"
+        android:text="Assign Items" />
+
+</RelativeLayout>

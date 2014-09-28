@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".ViewRepHistory" >
+
+    <TextView
+        android:id="@+id/tv_history_loggeduser_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="16dp"
+        android:text="You are logged in as:"
+        android:textSize="15dp" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_history_viewlogger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_history_loggeduser_rosh"
+        android:layout_alignBottom="@+id/tv_history_loggeduser_rosh"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="24dp"
+        android:layout_toRightOf="@+id/tv_history_loggeduser_rosh"
+        android:text="TextView"
+        android:textSize="15dp"
+        android:textColor="#ffee28" />
+
+    <Button
+        android:id="@+id/btn_rephistry_date1_rosh"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_history_loggeduser_rosh"
+        android:layout_marginTop="41dp"
+        android:text="Start Date" 
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_rh_datedisplay_rosh"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_rephistry_date1_rosh"
+        android:layout_alignBottom="@+id/btn_rephistry_date1_rosh"
+        android:layout_alignParentRight="true"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btn_rh_date2_rosh"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_rephistry_date1_rosh"
+        android:layout_marginTop="40dp"
+        android:text="End Date" 
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_rh_date2display_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_rh_date2_rosh"
+        android:layout_alignBottom="@+id/btn_rh_date2_rosh"
+        android:layout_alignLeft="@+id/tv_rh_datedisplay_rosh"
+        android:layout_alignParentRight="true"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_rh_repname_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_rh_date2_rosh"
+        android:layout_marginTop="48dp"
+        android:text="Rep Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/spinner_rh_rep_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_rh_date2display_rosh"
+        android:layout_below="@+id/btn_rh_date2_rosh"
+        android:layout_marginTop="34dp" />
+
+    <Button
+        android:id="@+id/btn_rh_history_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_rh_rep_rosh"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text="View Rep History" />
+
+    <Button
+        android:id="@+id/pdf_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Monthly Assigned Item report" />
+
+</RelativeLayout>

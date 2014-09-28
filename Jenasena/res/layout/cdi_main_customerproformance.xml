@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround" >
+
+    <TextView
+        android:id="@+id/tv_cdMainCustomerProformance_title_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Logged in As"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_cdMainCustomerProformance_id_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tv_cdMainCustomerProformance_shop_Isuru"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_cdMainCustomerProformance_hedder_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_cdMainCustomerProformance_title_Isuru"
+        android:layout_marginTop="18dp"
+        android:text="       Customer Performance"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_cdMainCustomerProformance_shop_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_cdMainCustomerProformance_hedder_Isuru"
+        android:layout_marginTop="20dp"
+        android:text="Shop Name"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/sp_cdMainCustomerProformance_shop_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_cdMainCustomerProformance_shop_Isuru"
+        android:layout_marginLeft="20dp"
+        android:textColor="#ffee28" 
+        android:background="@drawable/spinner_background"
+        android:layout_toRightOf="@+id/tv_cdMainCustomerProformance_shop_Isuru" />
+
+    <TextView
+        android:id="@+id/tv_cdMainCustomerProformance_cusidtitle_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sp_cdMainCustomerProformance_shop_Isuru"
+        android:layout_marginTop="31dp"
+        android:text="Customer id  "
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_cdMainCustomerProformance_cusid_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_cdMainCustomerProformance_cusidtitle_Isuru"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/tv_cdMainCustomerProformance_cusidtitle_Isuru"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_cdMainCustomerProformance_nametitle_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_cdMainCustomerProformance_cusidtitle_Isuru"
+        android:layout_marginTop="22dp"
+        android:layout_toLeftOf="@+id/sp_cdMainCustomerProformance_shop_Isuru"
+        android:text="Name"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textview_cdMainCustomerProformance_name_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_cdMainCustomerProformance_nametitle_Isuru"
+        android:layout_alignBottom="@+id/tv_cdMainCustomerProformance_nametitle_Isuru"
+        android:layout_alignLeft="@+id/tv_cdMainCustomerProformance_cusid_Isuru"
+        android:layout_alignParentRight="true"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageButton
+        android:id="@+id/bt_cdMainCustomerProformance_call_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_cdMainCustomerProformance_nametitle_Isuru"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/call" />
+
+    <Button
+        android:id="@+id/bt_cdMainCustomerProformance_chart_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/bt_cdMainCustomerProformance_call_Isuru"
+        android:layout_marginTop="37dp"
+        android:drawableLeft="@drawable/charts"
+        android:textColor="#ffee28"
+        android:text="Chart" />
+
+</RelativeLayout></ScrollView>

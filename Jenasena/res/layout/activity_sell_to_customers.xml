@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/backbround"
+    tools:context=".SellToCustomers" >
+
+    <TextView
+        android:id="@+id/tv_SellToCus_Title_cusId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_SellToCus_Title_loggedIn"
+        android:layout_marginTop="18dp"
+        android:text="Customer id"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28"
+         />
+
+    <TextView
+        android:id="@+id/tv_SellToCus_Title_Repid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_SellToCus_Title_cusId"
+        android:layout_alignParentTop="true"
+        android:text="Logged in as"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="#ffee28"
+        />
+
+    <TextView
+        android:id="@+id/tv_SellToCus_Title_sellingdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_SellToCus_Title_cusId"
+        android:layout_below="@+id/tv_SellToCus_Title_cusId"
+        android:text="Selling Date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28"
+         />
+
+    <TextView
+        android:id="@+id/tv_SellToCus_Cusid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_SellToCus_sellingdate"
+        android:layout_alignLeft="@+id/tv_SellToCus_sellingdate"
+        android:text="cusid"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28"
+         />
+
+    <TextView
+        android:id="@+id/tv_SellToCus_sellingdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_SellToCus_Title_sellingdate"
+        android:layout_alignBottom="@+id/tv_SellToCus_Title_sellingdate"
+        android:layout_marginLeft="49dp"
+        android:layout_toRightOf="@+id/tv_SellToCus_Title_Repid"
+        android:text="sell date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28"
+        />
+
+    <TextView
+        android:id="@+id/tv_SellToCus_Repid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_SellToCus_Title_Repid"
+        android:layout_alignBottom="@+id/tv_SellToCus_Title_Repid"
+        android:layout_alignLeft="@+id/tv_SellToCus_Cusid"
+        android:text="Repid"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28"
+         />
+
+    <Button
+        android:id="@+id/bt_SellToCus_Vieworder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_SellToCus_AvailQty"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="View Order" />
+
+    <Button
+        android:id="@+id/bt_SellToCus_Additem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_SellToCus_Title_SellingQty"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/bt_SellToCus_Vieworder"
+        android:text="Add Item" />
+
+    <TextView
+        android:id="@+id/tv_SellToCus_Unitprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_SellToCus_Titile_Unitprice"
+        android:layout_alignBottom="@+id/tv_SellToCus_Titile_Unitprice"
+        android:layout_alignLeft="@+id/tv_SellToCus_AvailQty"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_SellToCus_AvailQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_SellToCus_Title_AvailableQty"
+        android:layout_alignBottom="@+id/tv_SellToCus_Title_AvailableQty"
+        android:layout_alignLeft="@+id/sp_SellToCus_items"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_SellToCus_Title_ItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/sp_SellToCus_items"
+        android:layout_marginTop="20dp"
+        android:text="Item Name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <Spinner
+        android:id="@+id/sp_SellToCus_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_SellToCus_sellingdate"
+        android:layout_marginTop="21dp"
+        android:layout_toRightOf="@+id/tv_SellToCus_Title_AvailableQty" />
+
+    <TextView
+        android:id="@+id/tv_SellToCus_Title_AvailableQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_SellToCus_Title_ItemName"
+        android:layout_below="@+id/sp_SellToCus_items"
+        android:layout_marginTop="36dp"
+        android:text="Available Quantity"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_SellToCus_Titile_Unitprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_SellToCus_Title_AvailableQty"
+        android:layout_below="@+id/tv_SellToCus_Title_AvailableQty"
+        android:layout_marginTop="46dp"
+        android:text="Unit Price(Rs)"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_SellToCus_Title_SellingQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_SellToCus_Titile_Unitprice"
+        android:layout_alignTop="@+id/et_SellToCus_SellQty"
+        android:text="Selling Quantity"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/et_SellToCus_SellQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_SellToCus_Unitprice"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@+id/bt_SellToCus_Additem"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>

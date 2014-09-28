@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    
+
+    <TextView
+        android:id="@+id/tv_sr_repid_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RepId" 
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tv_sr_itmname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="38dp"
+        android:layout_toRightOf="@+id/tv_sr_repid_rosh"
+        android:text="ItemName"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tv_sr_qty_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="46dp"
+        android:layout_toRightOf="@+id/tv_sr_itmname"
+        android:text="Qty" 
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tv_sr_issue_rosh"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Issue" 
+        android:textColor="@android:color/black"/>
+
+</RelativeLayout>

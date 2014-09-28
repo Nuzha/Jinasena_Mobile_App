@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".ABC" >
+
+    <TextView
+        android:id="@+id/tv_repassign_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_dellog_rosh"
+        android:layout_below="@+id/tv_dellog_rosh"
+        android:layout_marginTop="14dp"
+        android:text="Assign Items to:" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_date_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_rep_rosh"
+        android:layout_marginTop="21dp"
+        android:layout_toLeftOf="@+id/btn_date_rosh"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btn_date_rosh"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_date_rosh"
+        android:layout_alignBottom="@+id/tv_date_rosh"
+        android:layout_alignParentRight="true"
+        android:text="Date" />
+
+    <Spinner
+        android:id="@+id/spin_items_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/btn_date_rosh"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/tv_dellog_rosh" />
+
+    <TextView
+        android:id="@+id/tv_itm_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spin_items_rosh"
+        android:layout_alignParentLeft="true"
+        android:text="Item Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_tv_stck_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_itm_rosh"
+        android:layout_marginTop="36dp"
+        android:text="Stock Quantity"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_stockqty_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spin_items_rosh"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_tv_stck_rosh"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/etv2_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_tv_stck_rosh"
+        android:layout_marginTop="26dp"
+        android:text="Assign Quantity"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/etv_assignqty_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etv2_rosh"
+        android:layout_alignBottom="@+id/etv2_rosh"
+        android:layout_alignLeft="@+id/tv_stockqty_rosh"
+        android:inputType="number"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tv_uc2_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/etv_assignqty_rosh"
+        android:layout_marginTop="35dp"
+        android:text="Unit Cost(Rs.)"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_unitcost_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_uc2_rosh"
+        android:layout_alignBottom="@+id/tv_uc2_rosh"
+        android:layout_alignLeft="@+id/etv_assignqty_rosh"
+        android:layout_alignParentRight="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_dellog_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="You are logged in as:" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_del_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_repassign_rosh"
+        android:layout_toLeftOf="@+id/tv_date_rosh"
+        android:text="TextView" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_rep_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_repassign_rosh"
+        android:layout_alignBottom="@+id/tv_repassign_rosh"
+        android:layout_toLeftOf="@+id/tv_date_rosh"
+        android:text="TextView" 
+        android:textColor="#ffee28"/>
+
+    <Button
+        android:id="@+id/btn_chqstock_nai_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Stock level has reached to the re-order level"
+        android:background="#ffff00"/>
+
+    <Button
+        android:id="@+id/btn_refresh_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_assign_rosh"
+        android:layout_alignBottom="@+id/btn_assign_rosh"
+        android:layout_alignLeft="@+id/tv_rep_rosh"
+        android:layout_marginLeft="18dp"
+        android:text="Refresh" />
+
+    <Button
+        android:id="@+id/btn_assign_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_chqstock_nai_rosh"
+        android:layout_alignLeft="@+id/tv_repassign_rosh"
+        android:layout_marginBottom="19dp"
+        android:text="Assign Items" />
+
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    android:padding="5dp"
+    tools:context=".Totamount" >
+
+    <TextView
+        android:id="@+id/tv_tm_labellogger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="You are logged in as:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_tm_logger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/tv_tm_labellogger_rosh"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_tm_repID_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_tm_labellogger_rosh"
+        android:layout_marginTop="14dp"
+        android:text="RepID"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_tm_assdate_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_tm_repID_rosh"
+        android:layout_alignBottom="@+id/tv_tm_repID_rosh"
+        android:layout_alignParentRight="true"
+        android:text="TextView" 
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/btn_tm_update_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="57dp"
+        android:text="UPDATE" />
+
+    <Button
+        android:id="@+id/btn_received_date_tm_rosh"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_tm_update_rosh"
+        android:layout_marginBottom="26dp"
+        android:layout_toLeftOf="@+id/tv_tm_logger_rosh"
+        android:text="Amount Received Date"
+        android:gravity="left"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_received_date_tm_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_received_date_tm_rosh"
+        android:layout_alignBottom="@+id/btn_received_date_tm_rosh"
+        android:layout_alignLeft="@+id/tv_tm_logger_rosh"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/edt_tm_received_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_received_date_tm_rosh"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tv_tm_targetamt_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_tm_targetamtlabel_rosh"
+        android:layout_alignBottom="@+id/tv_tm_targetamtlabel_rosh"
+        android:layout_alignLeft="@+id/edt_tm_received_rosh"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_tm_target_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_tm_targetamt_rosh"
+        android:layout_alignLeft="@+id/tv_tm_targetamt_rosh"
+        android:layout_marginBottom="18dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_tm_targetlabel_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_tm_target_rosh"
+        android:layout_alignBottom="@+id/tv_tm_target_rosh"
+        android:layout_alignParentLeft="true"
+        android:text="Target Date"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_tm_targetamtlabel_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_tm_targetreceivedlabel_rosh"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="21dp"
+        android:text="Target amount"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_tm_targetreceivedlabel_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/edt_tm_received_rosh"
+        android:text="Paid Amount"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_tm_repid_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_tm_repID_rosh"
+        android:layout_alignBottom="@+id/tv_tm_repID_rosh"
+        android:layout_alignRight="@+id/tv_tm_targetamtlabel_rosh"
+        android:text="TextView"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_tm_assigneddate_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_tm_assdate_rosh"
+        android:layout_alignBottom="@+id/tv_tm_assdate_rosh"
+        android:layout_toLeftOf="@+id/tv_tm_assdate_rosh"
+        android:text="Assigned Date" 
+        android:textColor="@android:color/black"/>
+
+</RelativeLayout>

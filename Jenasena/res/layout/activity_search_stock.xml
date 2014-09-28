@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".SearchStock" >
+
+     <TextView
+        android:id="@+id/tv_search_logger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="You are logged in as:"
+        android:textColor="#ffee28" />
+
+     <TextView
+         android:id="@+id/tv_loggedusername_rosh"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_marginLeft="14dp"
+         android:layout_toRightOf="@+id/tv_search_logger_rosh"
+         android:text="TextView"
+         android:textColor="#ffee28" />
+     
+     <TextView
+        android:id="@+id/r_tvrep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:text="Rep ID"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <Spinner
+         android:id="@+id/r_srep"
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/r_tvrep" />
+     
+     <TextView
+        android:id="@+id/r_tvassdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/r_srep"
+        android:layout_alignParentRight="true"
+        android:text="Assigned Date"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+     
+      <TextView
+        android:id="@+id/tv_date_sc_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/r_tvassdate"
+        android:layout_alignTop="@+id/r_srep"
+        android:layout_marginTop="14dp"
+        android:text="TextView" />
+      
+      <Button
+        android:id="@+id/btn_sc_date_rosh"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/r_srep"
+        android:layout_toRightOf="@+id/r_uniitcost"
+        android:text="D" />
+      
+      
+      <Button
+        android:id="@+id/r_bSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/r_srep"
+        android:layout_centerHorizontal="true"
+        android:text="View Daily Stock and Calculate Total Amount" 
+        android:textSize="13dp"/>
+
+       <TextView
+           android:id="@+id/r_itmname"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/r_bSearch"
+           android:text="Item Name"
+           android:textColor="@color/white" />
+
+       <TextView
+           android:id="@+id/r_assqtyyyy"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignBaseline="@+id/r_itmname"
+           android:layout_alignBottom="@+id/r_itmname"
+           android:layout_toRightOf="@+id/r_srep"
+           android:text="Assigned Qty"
+           android:textColor="@color/white" />
+
+       <TextView
+           android:id="@+id/r_uniitcost"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignLeft="@+id/tv_date_sc_rosh"
+           android:layout_below="@+id/r_bSearch"
+           android:layout_marginLeft="18dp"
+           android:text="Unit Cost"
+           android:textColor="@color/white" />
+
+        <ListView
+            android:id="@+id/r_lvstock"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/r_itmname" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/tv_sc_totamt_rosh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_sc_total_rosh"
+            android:layout_alignBottom="@+id/tv_sc_total_rosh"
+            android:layout_toRightOf="@+id/tv_loggedusername_rosh"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/btn_report1_rosh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/tv_loggedusername_rosh"
+            android:layout_toRightOf="@+id/r_bdelete"
+            android:text="Daily Assigned Items Report"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_sc_total_rosh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/r_lvstock"
+            android:text="Total Amount(Rs)"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/r_bdelete"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/tv_search_logger_rosh"
+            android:text="Update"
+            android:textSize="15dp" />
+       
+</RelativeLayout>

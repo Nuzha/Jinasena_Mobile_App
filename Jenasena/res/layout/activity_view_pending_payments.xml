@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".View_pending_payments" >
+
+    <TextView
+        android:id="@+id/tv_vp_labellogger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="You are logged in as:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_vp_logger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="21dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_vp_repid_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_vp_labellogger_rosh"
+        android:layout_marginTop="14dp"
+        android:text="Rep ID"
+        android:textColor="@android:color/black" />
+
+    <Spinner
+        android:id="@+id/sp_vp_rep_rosh"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignRight="@+id/tv_vp_logger_rosh"
+        android:layout_below="@+id/tv_vp_labellogger_rosh"
+        android:layout_marginRight="46dp" />
+
+    <Button
+        android:id="@+id/btn_vp_sdate_rosh"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sp_vp_rep_rosh"
+        android:text="Start Date" />
+
+    <TextView
+        android:id="@+id/tv_vp_sdate_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_vp_sdate_rosh"
+        android:layout_alignBottom="@+id/btn_vp_sdate_rosh"
+        android:layout_alignRight="@+id/tv_vp_labellogger_rosh"
+        android:text="TextView"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/btn_edate_vp_rosh"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_vp_sdate_rosh"
+        android:text="End Date" />
+
+    <TextView
+        android:id="@+id/tv_edate_vp_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_edate_vp_rosh"
+        android:layout_alignBottom="@+id/btn_edate_vp_rosh"
+        android:layout_alignLeft="@+id/tv_vp_sdate_rosh"
+        android:text="TextView" 
+        android:textColor="@android:color/black"/>
+
+    
+    <Button
+        android:id="@+id/btn_vp_viewpaymnets_rosh"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_edate_vp_rosh"
+        android:text="View Payments" />
+
+    <TextView
+        android:id="@+id/tv_assdate_vp_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_vp_viewpaymnets_rosh"
+        android:text="Assigned Date"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_targetdate_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_vp_tot_rosh"
+        android:layout_alignBottom="@+id/tv_vp_tot_rosh"
+        android:layout_alignRight="@+id/tv_vp_logger_rosh"
+        android:layout_marginRight="18dp"
+        android:text="Status" 
+        android:textColor="@color/white"/>
+
+    <ListView
+        android:id="@+id/lv_vp_result_rosh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_assdate_vp_rosh" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_vp_tot_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_assdate_vp_rosh"
+        android:layout_alignBottom="@+id/tv_assdate_vp_rosh"
+        android:layout_centerHorizontal="true"
+        android:text="Total Amount"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

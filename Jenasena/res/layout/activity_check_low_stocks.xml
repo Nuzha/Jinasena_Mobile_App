@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".CheckLowStocks" >
+
+    <TextView
+        android:id="@+id/tv_cls_loggerlbl_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="You are logged in as:" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_cls_logger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/tv_cls_loggerlbl_rosh"
+        android:text="TextView"
+        android:textColor="#ffee28" />
+
+    <Button
+        android:id="@+id/btn_cls_date_rosh"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_cls_viewdate_rosh"
+        android:layout_alignBottom="@+id/tv_cls_viewdate_rosh"
+        android:layout_alignParentRight="true"
+        android:text="Date" 
+        android:textSize="7dp"/>
+
+    <TextView
+        android:id="@+id/tv_cls_viewdate_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_cls_logger_rosh"
+        android:layout_marginTop="19dp"
+        android:layout_toLeftOf="@+id/btn_cls_date_rosh"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btn_cls_display_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_cls_date_rosh"
+        android:layout_marginTop="17dp"
+        android:text="Check low stocks to order"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_cls_lowqty_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_cls_itmnamelbl_rosh"
+        android:layout_alignBottom="@+id/tv_cls_itmnamelbl_rosh"
+        android:layout_alignLeft="@+id/tv_cls_logger_rosh"
+        android:text="Remaining Quantity" 
+        android:textColor="@color/white"/>
+
+    <ListView
+        android:id="@+id/lv_cls_displayresult_rosh"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_cls_itmnamelbl_rosh" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btn_cls_reorder_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_cls_itmnamelbl_rosh"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:text="Send an email to re-order stocks" />
+
+    <TextView
+        android:id="@+id/tv_cls_itmnamelbl_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tv_cls_loggerlbl_rosh"
+        android:layout_below="@+id/btn_cls_display_rosh"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="21dp"
+        android:text="Item Name"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_intent_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_cls_reorder_rosh"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lv_cls_displayresult_rosh"
+        android:text="" />
+
+</RelativeLayout>

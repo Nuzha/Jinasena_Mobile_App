@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".InvoiceHisDate" >
+
+    <TextView
+        android:id="@+id/tv_invoiceHisDate_Tilte_repid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_invoiceHisDate_Tilte_repid"
+        android:text="Logged in as"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_invoiceHisDate_Tilte_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_invoiceHisDate_Tilte_repid"
+        android:layout_below="@+id/tv_invoiceHisDate_Tilte_repid"
+        android:text="Date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28"
+         />
+
+    <TextView
+        android:id="@+id/tv_invoiceHisDate_repid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_invoiceHisDate_Tilte_date"
+        android:layout_centerHorizontal="true"
+        android:text="DelRep"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+         />
+
+    <TextView
+        android:id="@+id/tv_invoiceHisDate_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_invoiceHisDate_Tilte_date"
+        android:layout_alignBottom="@+id/tv_invoiceHisDate_Tilte_date"
+        android:layout_alignLeft="@+id/tv_invoiceHisDate_repid"
+        android:text="Dateee"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/bt_invoiceHisDate_date"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_invoiceHisDate_date"
+        android:layout_alignBottom="@+id/tv_invoiceHisDate_date"
+        android:layout_alignParentRight="true"
+        android:text="Date" />
+
+    <Button
+        android:id="@+id/bt_invoiceHisDate_genInvoce"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_invoiceHisDate_Tilte_date"
+        android:layout_alignRight="@+id/bt_invoiceHisDate_date"
+        android:layout_below="@+id/tv_invoiceHisDate_date"
+        android:text="View History" />
+
+    <ListView
+        android:id="@+id/lv_invoiceHisDate_his"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/bt_invoiceHisDate_date"
+        android:layout_below="@+id/bt_invoiceHisDate_genInvoce" >
+
+    </ListView>
+
+</RelativeLayout>

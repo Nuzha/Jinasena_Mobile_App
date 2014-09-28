@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".AvailableProducts" >
+
+    <TextView
+        android:id="@+id/tv_ap_labellogger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="You are logged in as:"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_ap_logger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/tv_ap_labellogger_rosh"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:textColor="#ffee28"/>
+
+   
+    <Button
+        android:id="@+id/btn_ap_date_rosh"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_ap_logger_rosh"
+        android:text="Date"
+        android:textSize="7dp" />
+
+    <Button
+        android:id="@+id/btn_ap_chkavail_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_ap_date_rosh"
+        android:text="Check Remaining Dealer Stock" />
+
+    <TextView
+        android:id="@+id/tv_ap_itemname_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_ap_chkavail_rosh"
+        android:layout_marginTop="16dp"
+        android:text="Item Name" 
+        android:textColor="@color/white"/>
+
+    <ListView
+        android:id="@+id/lv_ap_avail_rosh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_ap_itemname_rosh" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_ap_date_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_ap_date_rosh"
+        android:layout_alignBottom="@+id/btn_ap_date_rosh"
+        android:layout_alignLeft="@+id/tv_ap_logger_rosh"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        />
+
+    <TextView
+        android:id="@+id/tv_ap_availqty_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_ap_itemname_rosh"
+        android:layout_alignBottom="@+id/tv_ap_itemname_rosh"
+        android:layout_alignLeft="@+id/tv_ap_date_rosh"
+        android:text="Available Qty"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".SendEmail" >
+
+    <Button
+        android:id="@+id/btn_sendemail_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="Send Email" />
+
+    <EditText
+        android:id="@+id/etv_content_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_contentlbl_r"
+        android:ems="10"
+        android:hint="Content of the mail" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etv_subject_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Subject of the email"
+        android:text="Re-Order Items" />
+
+    <EditText
+        android:id="@+id/etv_to_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_subject_lbl_r"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:hint="Receiver&apos;s email address" 
+        android:text="Jinasena@gmail.com"/>
+
+    <TextView
+        android:id="@+id/tv_tolbl_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etv_to_r"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/btn_sendemail_r"
+        android:text="To:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_subject_lbl_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etv_subject_r"
+        android:layout_alignParentLeft="true"
+        android:text="Subject"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_contentlbl_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/etv_subject_r"
+        android:layout_marginTop="38dp"
+        android:text="Content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_emaillabl_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_tolbl_r"
+        android:layout_alignRight="@+id/btn_sendemail_r"
+        android:layout_marginBottom="19dp"
+        android:text="Compose Email"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_loggedlbl_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="You are logged in as:" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_logger_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/tv_loggedlbl_r"
+        android:text="TextView" 
+        android:textColor="#ffee28"/>
+
+</RelativeLayout>

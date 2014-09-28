@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/backbround"
+    tools:context=".MainActivity" >
+    
+    <TextView
+        android:id="@+id/tv_I_username_activitymain_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="166dp"
+        android:text="User Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffee28" />
+
+    <EditText
+        android:id="@+id/et_I_username_activitymain_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_I_username_activitymain_a"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:textColor="#ffee28"
+        android:ems="10"
+        android:hint="UserName" />
+
+    <TextView
+        android:id="@+id/tv_I_password_activitymain_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_I_username_activitymain_a"
+        android:layout_below="@+id/et_I_username_activitymain_a"
+        android:layout_marginTop="14dp"
+        android:text="password"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffee28" />
+
+    <Button
+        android:id="@+id/bt_I_loging_activitymain_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_I_password_activitymain_a"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/login"
+        android:textColor="#ffee28"
+        android:text="Loging" />
+
+    <EditText
+        android:id="@+id/et_I_password_activitymain_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_I_username_activitymain_a"
+        android:layout_below="@+id/tv_I_password_activitymain_a"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:textColor="#ffee28"
+        android:inputType="textPassword" />
+
+    <ImageView
+        android:id="@+id/iv_I_dealer_activity_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_I_username_activitymain_a"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/owner" />
+
+    <RadioGroup
+        android:id="@+id/rg_I_selectloging_activity_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:layout_alignLeft="@+id/iv_I_dealer_activity_a"
+        android:layout_below="@+id/iv_I_dealer_activity_a" >
+
+        <RadioButton
+            android:id="@+id/rb_I_delear_activity_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textColor="#ffee28"
+            android:text="Dealer" />
+
+        <RadioButton
+            android:id="@+id/rb_I_rep_activity_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffee28"
+            android:text="Rep" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/iv_I_Rep_activity_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tv_I_username_activitymain_a"
+        android:layout_alignTop="@+id/iv_I_dealer_activity_a"
+        android:src="@drawable/delear" />
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/iv_I_Rep_activity_a"
+        android:text="Sign in"
+        android:textColor="#ffee28" />
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView1"
+         android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" 
+            android:background="@drawable/backbround">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Add a new task to the list.."
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView1"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="19dp"
+                android:text="Task "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView2"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_marginLeft="17dp"
+                android:layout_toRightOf="@+id/textView2"
+                android:ems="10" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Add task to the list " />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/button1"
+                android:layout_alignRight="@+id/button1"
+                android:layout_below="@+id/button1"
+                android:text="Search for all tasks" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/button2"
+                android:layout_marginBottom="81dp"
+                android:text="Assign task" />
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/button2"
+                android:layout_marginTop="22dp" >
+            </ListView>
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/button3"
+                android:layout_below="@+id/listView1"
+                android:layout_marginTop="62dp"
+                android:text="Date " />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/button4"
+                android:layout_alignTop="@+id/button4"
+                android:layout_marginLeft="35dp"
+                android:layout_toRightOf="@+id/button4"
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+        </RelativeLayout>
+    </ScrollView>
+    
+

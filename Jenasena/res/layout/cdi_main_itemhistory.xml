@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround" >
+
+    <TextView
+        android:id="@+id/tv_cdMainItemHistory_title_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Logged in As"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_cdMainItemHistory_id_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="35dp"
+        android:layout_toRightOf="@+id/tv_cdMainItemHistory_title_Isuru"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_cdMainItemHistory_charttitle_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_cdMainItemHistory_title_Isuru"
+        android:layout_marginTop="19dp"
+        android:text="          Item History"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_cdMainItemHistory_itemid_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_cdMainItemHistory_charttitle_Isuru"
+        android:layout_marginTop="24dp"
+        android:text="Item Id"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/sp_cdMainItemHistory_itemid_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffee28" 
+        android:background="@drawable/spinner_background"
+        android:layout_alignLeft="@+id/tv_cdMainItemHistory_id_Isuru"
+        android:layout_alignTop="@+id/tv_cdMainItemHistory_itemid_Isuru" />
+
+    <TextView
+        android:id="@+id/tv_cdMainItemHistory_itemname_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tv_cdMainItemHistory_title_Isuru"
+        android:layout_below="@+id/sp_cdMainItemHistory_itemid_Isuru"
+        android:layout_marginTop="26dp"
+        android:text="Name"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_cdMainItemHistory_itemofname_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_cdMainItemHistory_itemname_Isuru"
+        android:layout_alignBottom="@+id/tv_cdMainItemHistory_itemname_Isuru"
+        android:layout_alignLeft="@+id/sp_cdMainItemHistory_itemid_Isuru"
+        android:layout_alignParentRight="true"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/myloc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_cdMainItemHistory_itemname_Isuru"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_cdMainItemHistory_itemname_Isuru"
+        android:textColor="#ffee28"
+        android:drawableLeft="@drawable/charts"
+        android:layout_marginTop="68dp"
+        android:text="Charts" />
+
+</RelativeLayout></ScrollView>

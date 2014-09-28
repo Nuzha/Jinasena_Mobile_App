@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_st_repid_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RepId" 
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tv_st_qty_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="29dp"
+        android:layout_toRightOf="@+id/tv_st_repid_rosh"
+        android:text="Qty" 
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tv_st_cost_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Unitcost"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_st_date_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="25dp"
+        android:text="Date"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>

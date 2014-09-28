@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/backbround"
+    android:layout_height="match_parent" >
+    
+    <TextView
+        android:id="@+id/tv_searchrep_hedder_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Search Rep"
+        android:textColor="#ffffff"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <EditText
+        android:id="@+id/et_searchrep_cuzname_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_searchrep_hedder_Isuru"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+        <Button
+        android:id="@+id/bt_searchrep_pdf_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/pdf"
+        android:text="PDF REPORT"
+        android:textColor="#ffee28" />
+
+    <ListView
+        android:id="@+id/lv_searchrep_cuzlist_Isuru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_searchrep_pdf_Isuru"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/et_searchrep_cuzname_Isuru" >
+
+    </ListView>
+    
+
+</RelativeLayout>

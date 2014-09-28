@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".ViewMonthlyHistory" >
+
+    <TextView
+        android:id="@+id/tv_mai_repview_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_mai_rep_rosh"
+        android:layout_alignBottom="@+id/tv_mai_rep_rosh"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/tv_mai_rep_rosh"
+        android:text="TextView" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_mai_viewdate1_rosh"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_mai_startdate_rosh"
+        android:layout_alignBottom="@+id/tv_mai_startdate_rosh"
+        android:layout_alignParentRight="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_mai_enddate_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_mai_startdate_rosh"
+        android:layout_marginTop="19dp"
+        android:text="End Date"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_mai_viewdate2_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_mai_enddate_rosh"
+        android:layout_alignBottom="@+id/tv_mai_enddate_rosh"
+        android:layout_alignLeft="@+id/tv_mai_viewdate1_rosh"
+        android:layout_alignParentRight="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_mai_rep_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="16dp"
+        android:text="View Monthly Assigned Items to:" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_mai_startdate_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_mai_rep_rosh"
+        android:layout_marginTop="14dp"
+        android:text="Start Date"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btn_mai_view_rosh"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_mai_enddate_rosh"
+        android:layout_toLeftOf="@+id/tv_mai_repview_rosh"
+        android:text="View Rep History" />
+
+    <TextView
+        android:id="@+id/tv_mai_lbl1_rosh"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_mai_view_rosh"
+        android:layout_marginTop="20dp"
+        android:text="Item Name"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tv_mai_lbl2_rosh"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_mai_lbl1_rosh"
+        android:layout_alignBottom="@+id/tv_mai_lbl1_rosh"
+        android:layout_toRightOf="@+id/tv_mai_startdate_rosh"
+        android:text="Assign qty"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tv_mai_lbl3_rosh"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_mai_lbl1_rosh"
+        android:layout_alignBottom="@+id/tv_mai_lbl1_rosh"
+        android:layout_centerHorizontal="true"
+        android:text="Unit Cost" 
+        android:textColor="@color/white"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_mai_lbl4_rosh"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_mai_lbl3_rosh"
+        android:layout_alignBottom="@+id/tv_mai_lbl3_rosh"
+        android:layout_marginLeft="23dp"
+        android:layout_toRightOf="@+id/tv_mai_lbl3_rosh"
+        android:text="Assigned Date"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tv_mai_lbl5_rosh"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_mai_lbl4_rosh"
+        android:layout_alignBottom="@+id/tv_mai_lbl4_rosh"
+        android:layout_alignParentRight="true"
+        android:text="Available qty"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+    <ListView
+        android:id="@+id/lv_mai_result_rosh"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_mai_lbl2_rosh" >
+
+    </ListView>
+
+</RelativeLayout>

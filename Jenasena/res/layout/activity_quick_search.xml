@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".QuickSearch" >
+
+    <TextView
+        android:id="@+id/tv_qs_logger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/tv_qs_labellogger_rosh"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_qs_labellogger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_qs_logger_rosh"
+        android:layout_alignBottom="@+id/tv_qs_logger_rosh"
+        android:layout_alignParentLeft="true"
+        android:text="You are logged in as:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_qs_labeloption_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_qs_labellogger_rosh"
+        android:layout_marginTop="50dp"
+        android:text="Select the option that you want to search:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <RadioButton
+            android:id="@+id/radiobtn_totitem_r"
+            android:layout_width="wrap_content"
+            android:layout_height="86dp"
+            android:layout_alignRight="@+id/tv_history_loggeduser_rosh"
+            android:layout_below="@+id/tv_options_rosh"
+            android:text="Check Total Assigned Items"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radiobtn_avail_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Available Items"
+            android:textSize="20dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_next_qs_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:text="Process" />
+
+</RelativeLayout>

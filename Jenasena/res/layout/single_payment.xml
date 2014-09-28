@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Single_payment" >
+
+    <TextView
+        android:id="@+id/tv_pay_assigned_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Adate" />
+
+    <TextView
+        android:id="@+id/tv_target_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="34dp"
+        android:text="Target" />
+
+    <TextView
+        android:id="@+id/tv_pay_tot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="84dp"
+        android:layout_toRightOf="@+id/tv_pay_assigned_date"
+        android:text="total quantity" />
+    
+</RelativeLayout>

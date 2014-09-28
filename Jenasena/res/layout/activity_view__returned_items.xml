@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".View_Returned_items" >
+
+    <TextView
+        android:id="@+id/tv_vri_labellogger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="You are logged in as:"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_vri_logger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/tv_vri_labellogger_rosh"
+        android:text="Medium Text"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btn_vri_date_rosh"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/tv_vri_datetxt_rosh"
+        android:layout_alignBottom="@+id/tv_vri_datetxt_rosh"
+        android:layout_alignParentRight="true"
+        android:text="Date" />
+
+    <TextView
+        android:id="@+id/tv_vri_datetxt_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_vri_logger_rosh"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/btn_vri_date_rosh"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btn_vri_return_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_vri_date_rosh"
+        android:text="Manage Return Items" />
+
+    <TextView
+        android:id="@+id/tv_vri_repid_rosh"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_vri_return_rosh"
+        android:text="Rep ID"
+        android:textColor="@color/white" />
+
+    <ListView
+        android:id="@+id/lv_vri_rlist_rosh"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_vri_repid_rosh" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_vri_issue_rosh"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_vri_return_rosh"
+        android:text="Issue of returning"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_vri_retqty"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lv_vri_rlist_rosh"
+        android:layout_alignLeft="@+id/tv_vri_logger_rosh"
+        android:text="Returned Qty"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_vri_ritem_rosh"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tv_vri_labellogger_rosh"
+        android:layout_below="@+id/btn_vri_return_rosh"
+        android:layout_marginRight="19dp"
+        android:text="Returned Item"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn_vri_next_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Send Email to notify the company" />
+
+    <TextView
+        android:id="@+id/tv_vri_load_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_vri_next_rosh"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lv_vri_rlist_rosh"
+        android:text="" />
+    
+</RelativeLayout>

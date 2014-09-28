@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ManageCustomerPayments" >
+
+    <TextView
+        android:id="@+id/tv_Title_repid_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Logged in as "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_soldDate_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_Titile_sellingdate_ManageCusPayments"
+        android:layout_alignLeft="@+id/sp_invoid_ManageCusPayments"
+        android:text="sold date"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_repid_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_Title_repid_ManageCusPayments"
+        android:layout_alignBottom="@+id/tv_Title_repid_ManageCusPayments"
+        android:layout_marginLeft="34dp"
+        android:layout_toRightOf="@+id/tv_Title_repid_ManageCusPayments"
+        android:text="repID"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_Title_cusid_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_Title_repid_ManageCusPayments"
+        android:layout_below="@+id/tv_Title_repid_ManageCusPayments"
+        android:text="Customer Id"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_Titile_invoiId_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_Title_cusid_ManageCusPayments"
+        android:layout_alignTop="@+id/sp_invoid_ManageCusPayments"
+        android:layout_marginTop="20dp"
+        android:text="Invoice Id"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <Spinner
+        android:id="@+id/sp_invoid_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_repid_ManageCusPayments"
+        android:layout_below="@+id/tv_Title_cusid_ManageCusPayments"
+        android:layout_marginTop="33dp" />
+
+    <TextView
+        android:id="@+id/tv_Titile_sellingdate_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_Titile_invoiId_ManageCusPayments"
+        android:layout_below="@+id/sp_invoid_ManageCusPayments"
+        android:layout_marginTop="23dp"
+        android:text="Issued Date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_cusid_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sp_invoid_ManageCusPayments"
+        android:layout_alignLeft="@+id/tv_repid_ManageCusPayments"
+        android:text="cusid"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_Title_amount_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tv_Title_repid_ManageCusPayments"
+        android:layout_below="@+id/tv_Titile_sellingdate_ManageCusPayments"
+        android:layout_marginTop="35dp"
+        android:text="Amount to be paid(Rs)"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_amount_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_Title_amount_ManageCusPayments"
+        android:layout_alignBottom="@+id/tv_Title_amount_ManageCusPayments"
+        android:layout_alignLeft="@+id/tv_soldDate_ManageCusPayments"
+        android:text="amount"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_Title_payingDate_MnageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_PayingDate_ManageCusPayements"
+        android:layout_alignBottom="@+id/tv_PayingDate_ManageCusPayements"
+        android:text="Paying date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/bt_enter_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Enter" />
+
+    <TextView
+        android:id="@+id/tv_Title_payingAmnt_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_Title_payingDate_MnageCusPayments"
+        android:layout_alignRight="@+id/tv_Title_cusid_ManageCusPayments"
+        android:layout_below="@+id/tv_Title_amount_ManageCusPayments"
+        android:layout_marginTop="18dp"
+        android:text="Paying Amount(Rs)"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/tv_payingamnt_ManageCusPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_Title_payingAmnt_ManageCusPayments"
+        android:layout_alignBottom="@+id/tv_Title_payingAmnt_ManageCusPayments"
+        android:layout_alignLeft="@+id/tv_amount_ManageCusPayments"
+        android:layout_toLeftOf="@+id/tb_duedate_ManageCusPayments"
+       
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_PayingDate_ManageCusPayements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tb_duedate_ManageCusPayments"
+        android:layout_alignLeft="@+id/tv_payingamnt_ManageCusPayments"
+        android:text="paidDte"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/tb_duedate_ManageCusPayments"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+         android:layout_below="@+id/tv_payingamnt_ManageCusPayments"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="14dp"
+        android:text="Date" />
+
+</RelativeLayout>

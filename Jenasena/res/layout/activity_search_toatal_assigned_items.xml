@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".SearchToatalAssignedItems" >
+
+    <TextView
+        android:id="@+id/tv_stai_labellogger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="You are logged in as:"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_stai_logger_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/tv_stai_labellogger_rosh"
+        android:text="Medium Text"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btn_sdate_stai_total"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_stai_labellogger_rosh"
+        android:text="Start Date" />
+
+    <TextView
+        android:id="@+id/tv_sdate_stai_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_sdate_stai_total"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/btn_sdate_stai_total"
+        android:layout_toRightOf="@+id/tv_stai_labellogger_rosh"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btn_edate_stai_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/btn_sdate_stai_total"
+        android:layout_below="@+id/btn_sdate_stai_total"
+        android:text="End Date" />
+
+    <TextView
+        android:id="@+id/tv_edate_stai_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_edate_stai_rosh"
+        android:layout_alignBottom="@+id/btn_edate_stai_rosh"
+        android:layout_alignLeft="@+id/tv_sdate_stai_rosh"
+        android:layout_alignParentRight="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_itmname_stai_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_edate_stai_rosh"
+        android:layout_marginTop="16dp"
+        android:text="Item Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/sp_itemname_stai_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_edate_stai_rosh"
+        android:layout_toRightOf="@+id/tv_stai_labellogger_rosh" />
+
+    <Button
+        android:id="@+id/btn_stai_process_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sp_itemname_stai_rosh"
+        android:layout_toRightOf="@+id/btn_sdate_stai_total"
+        android:text="Display Records" />
+
+    <TextView
+        android:id="@+id/tv_repid_stai_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_stai_process_rosh"
+        android:text="Rep ID" 
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_assdate_stai_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_stai_process_rosh"
+        android:text="Assigned Date"
+        android:textColor="@color/white" />
+
+    <ListView
+        android:id="@+id/exlv_stai_items_rosh"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_repid_stai_rosh" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_stai_totlabel_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/exlv_stai_items_rosh"
+        android:layout_marginTop="15dp"
+        android:text="Total Assigned Items"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_stai_item_namelabel_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_stai_totlabel_rosh"
+        android:layout_marginTop="16dp"
+        android:text="Total item Cost(Rs.)"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_stai_itemname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_stai_item_namelabel_rosh"
+        android:layout_alignBottom="@+id/tv_stai_item_namelabel_rosh"
+        android:layout_alignLeft="@+id/tv_stai_tot_rosh"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_qty_stai_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/exlv_stai_items_rosh"
+        android:layout_alignRight="@+id/btn_edate_stai_rosh"
+        android:text="Qty" 
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_stai_tot_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_stai_totlabel_rosh"
+        android:layout_alignBottom="@+id/tv_stai_totlabel_rosh"
+        android:layout_toRightOf="@+id/btn_stai_process_rosh"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_ucost_stai_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/exlv_stai_items_rosh"
+        android:layout_centerHorizontal="true"
+        android:text="Unit Cost(Rs)"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

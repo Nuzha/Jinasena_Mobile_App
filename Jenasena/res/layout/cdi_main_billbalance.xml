@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround" >
+
+    <TextView
+        android:id="@+id/tv_cdMainBillBalance_title_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Logged in As        "
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_cdMainBillBalance_id_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="33dp"
+        android:layout_toRightOf="@+id/tv_cdMainBillBalance_title_Isuru"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_cdMainBillBalance_repid_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_cdMainBillBalance_headertitle_Isuru"
+        android:layout_marginTop="18dp"
+        android:text="Representative Id"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_cdMainBillBalance_headertitle_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:textColor="#ffee28"
+        android:layout_below="@+id/tv_cdMainBillBalance_title_Isuru"
+        android:layout_marginTop="16dp"
+        android:text="          Bill Balance"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/sp_cdMainBillBalance_repid_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffee28" 
+        android:background="@drawable/spinner_background"
+        android:layout_alignLeft="@+id/tv_cdMainBillBalance_id_Isuru"
+        android:layout_alignTop="@+id/tv_cdMainBillBalance_repid_Isuru" />
+
+    <TextView
+        android:id="@+id/tv_cdMainBillBalance_repname_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_cdMainBillBalance_repnametitle_Isuru"
+        android:layout_alignLeft="@+id/sp_cdMainBillBalance_repid_Isuru"
+        android:layout_alignParentRight="true"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageButton
+        android:id="@+id/bt_cdMainBillBalance_call_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_cdMainBillBalance_repnametitle_Isuru"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/call" />
+
+    <Button
+        android:id="@+id/bt_cdMainBillBalance_chart_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/bt_cdMainBillBalance_call_Isuru"
+        android:layout_marginTop="44dp"
+         android:drawableLeft="@drawable/charts"
+         android:textColor="#ffee28"
+        android:text="Chart" />
+
+    <TextView
+        android:id="@+id/tv_cdMainBillBalance_repnametitle_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sp_cdMainBillBalance_repid_Isuru"
+        android:layout_marginTop="19dp"
+        android:text="Rep Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffee28" />
+
+</RelativeLayout></ScrollView>

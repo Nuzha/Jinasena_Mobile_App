@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/backbround"
+    
+    >
+
+    <TextView
+        android:id="@+id/tv_c_customerhistory_logger_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="You logged in as"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ListView
+        android:id="@+id/lv_c_customerhistory_cusSearch_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_c_customerhistory_logger_d" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/tv_c_customerhistory_loginId_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lv_c_customerhistory_cusSearch_d"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/tv_c_customerhistory_logger_d"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

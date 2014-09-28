@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/backbround"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_email_header_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#ffffff"
+        android:text="SENDING EMAILS"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_email_toheader_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_email_header_Isuru"
+        android:layout_marginTop="20dp"
+        android:text="TO" />
+
+    <TextView
+        android:id="@+id/tv_email_fromheader_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_email_toheader_Isuru"
+        android:layout_marginTop="16dp"
+        android:text="FROM" />
+
+    <TextView
+        android:id="@+id/tv_email_to_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_email_toheader_Isuru"
+        android:layout_alignBottom="@+id/tv_email_toheader_Isuru"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:textColor="#ffee28"
+        android:layout_toRightOf="@+id/tv_email_toheader_Isuru"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_email_from_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_email_fromheader_Isuru"
+        android:layout_alignBottom="@+id/tv_email_fromheader_Isuru"
+        android:layout_alignLeft="@+id/tv_email_to_Isuru"
+        android:layout_alignParentRight="true"
+        android:textColor="#ffee28"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_email_emailheader_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_email_fromheader_Isuru"
+        android:layout_marginTop="30dp"
+        android:text="SUBJECT" />
+
+    <EditText
+        android:id="@+id/et_email_emailheader_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_email_emailheader_Isuru"
+        android:layout_alignBottom="@+id/tv_email_emailheader_Isuru"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/tv_email_emailheader_Isuru"
+        android:ems="10"
+        android:textColor="#ffee28"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_email_content_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/iv_email_send_Isuru"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/et_email_emailheader_Isuru"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:background="#000000"
+        android:textColor="#ffffff"
+        android:inputType="textMultiLine" />
+
+    <ImageView
+        android:id="@+id/iv_email_send_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/send" />
+
+</RelativeLayout>

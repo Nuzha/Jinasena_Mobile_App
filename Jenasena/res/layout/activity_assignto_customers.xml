@@ -1,0 +1,218 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AssigntoCustomers" >
+
+    <TextView
+        android:id="@+id/tvACRepName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvtitleAC1"
+        android:layout_alignBottom="@+id/tvtitleAC1"
+        android:layout_marginLeft="32dp"
+        android:layout_toRightOf="@+id/tvtitleAC1"
+        android:text="Rep02"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvtitleAC1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvACtitle2"
+        android:layout_alignParentTop="true"
+        android:text="You are logged in as"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvtitleAC2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvtitleAC1"
+        android:layout_below="@+id/tvtitleAC1"
+        android:text="Customer Id"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvACCusId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvtitleAC2"
+        android:layout_alignBottom="@+id/tvtitleAC2"
+        android:layout_alignRight="@+id/tvACRepName"
+        android:text="Cus01"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvunitPrice"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/tvtitleuprice"
+        android:layout_alignBottom="@+id/tvtitleuprice"
+        android:layout_alignLeft="@+id/tvACavailQty"
+        android:layout_alignRight="@+id/btviewInvoice"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/bACAdditems"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="Add this item" />
+
+    <Button
+        android:id="@+id/btviewInvoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bACAdditems"
+        android:layout_alignTop="@+id/bACAdditems"
+        android:layout_toRightOf="@+id/tvACtitle2"
+        android:text="View Invoice" />
+
+    <TextView
+        android:id="@+id/tvtitleselldate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvtitleAC2"
+        android:layout_below="@+id/etACqty"
+        android:layout_marginTop="40dp"
+        android:text="Selling date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvtitledueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btdDate"
+        android:layout_alignLeft="@+id/tvtitleuprice"
+        android:text="Due date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvduedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btdDate"
+        android:layout_alignBottom="@+id/btdDate"
+        android:layout_alignLeft="@+id/tvselldate"
+        android:layout_toLeftOf="@+id/btsDate"
+        android:text="duedate"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvselldate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btsDate"
+        android:layout_alignBottom="@+id/btsDate"
+        android:layout_alignLeft="@+id/etACqty"
+        android:layout_toLeftOf="@+id/btsDate"
+        android:text="selldate"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btsDate"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/tvtitleselldate"
+        android:layout_alignParentRight="true"
+        android:text="D" />
+
+    <Button
+        android:id="@+id/btdDate"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btsDate"
+        android:layout_marginTop="22dp"
+        android:text="D" />
+
+    <TextView
+        android:id="@+id/tvACtitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bACAdditems"
+        android:layout_centerVertical="true"
+        android:text="Selling Quantity"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvtitleuprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etACqty"
+        android:layout_alignLeft="@+id/tvACtitle3"
+        android:layout_marginBottom="16dp"
+        android:text="Unit price (Rs)"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvACavailQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvunitPrice"
+        android:layout_alignRight="@+id/btviewInvoice"
+        android:layout_marginBottom="20dp"
+        android:layout_toRightOf="@+id/tvtitleAC1"
+        android:text="TextView"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvACtitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvACavailQty"
+        android:layout_alignBottom="@+id/tvACavailQty"
+        android:layout_alignLeft="@+id/tvtitleuprice"
+        android:text="Available Quantity"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/etACqty"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_alignBaseline="@+id/tvACtitle3"
+        android:layout_alignBottom="@+id/tvACtitle3"
+        android:layout_alignLeft="@+id/tvunitPrice"
+        android:layout_alignRight="@+id/btviewInvoice"
+        android:ems="10" />
+
+    <Spinner
+        android:id="@+id/spACItemLoader"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/tvACavailQty"
+        android:layout_alignLeft="@+id/tvACavailQty"
+        android:layout_alignRight="@+id/btsDate"
+        android:layout_below="@+id/tvACCusId" />
+
+    <TextView
+        android:id="@+id/tvACtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spACItemLoader"
+        android:layout_alignLeft="@+id/tvACtitle2"
+        android:layout_marginBottom="14dp"
+        android:text="Item Name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

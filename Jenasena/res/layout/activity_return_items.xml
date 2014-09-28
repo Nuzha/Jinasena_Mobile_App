@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ReturnItems" >
+
+    <TextView
+        android:id="@+id/tv_repid_title_return_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Logged in as:"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_repid_return_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_repid_title_return_items"
+        android:layout_alignBottom="@+id/tv_repid_title_return_items"
+        android:layout_marginLeft="23dp"
+        android:layout_toRightOf="@+id/tv_repid_title_return_items"
+        android:text="DelxxRepxx"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/spnner_items_retutn_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_repid_return_items"
+        android:layout_below="@+id/tv_repid_return_items"
+        android:textColor="@color/white"
+         />
+
+    <TextView
+        android:id="@+id/tv_title_returnQty_return_items"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/tv_title_availqty_retutn_items"
+        android:layout_below="@+id/tv_title_availqty_retutn_items"
+        android:layout_marginTop="18dp"
+        android:text="No of items to be returned"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_title_date_return_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_date_return_title"
+        android:layout_alignBottom="@+id/tv_date_return_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/tv_title_itemName_return_items"
+        android:text="Date"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_title_descrpt_return_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_title_date_return_items"
+        android:layout_below="@+id/tv_title_date_return_items"
+        android:layout_marginTop="24dp"
+        android:text="Description"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/et_descpt_return_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_add_rec_return_item"
+        android:layout_alignLeft="@+id/spnner_items_retutn_items"
+        android:layout_alignTop="@+id/tv_title_descrpt_return_items"
+        android:ems="10"
+        android:inputType="textMultiLine" 
+       
+        >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/bt_add_rec_return_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Add Record" />
+
+    <TextView
+        android:id="@+id/tv_title_availqty_retutn_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spnner_items_retutn_items"
+        android:layout_toLeftOf="@+id/tv_repid_return_items"
+        android:text="Available Quantity"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/et_qty_return_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spnner_items_retutn_items"
+        android:layout_alignTop="@+id/tv_title_returnQty_return_items"
+        android:layout_toLeftOf="@+id/bt_addDate_return_item"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button 
+        android:id="@+id/bt_addDate_return_item"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/et_descpt_return_item"
+        android:layout_below="@+id/tv_title_returnQty_return_items"
+        android:text="Date" />
+
+    <TextView
+        android:id="@+id/tv_date_return_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bt_addDate_return_item"
+        android:layout_alignLeft="@+id/et_descpt_return_item"
+        android:text="2020/12/02"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_availQty_retutn_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_title_availqty_retutn_items"
+        android:layout_alignLeft="@+id/et_qty_return_item"
+        android:text="Availqty"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_title_itemName_return_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_repid_title_return_items"
+        android:layout_alignTop="@+id/spnner_items_retutn_items"
+        android:text="Item Name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+</RelativeLayout>

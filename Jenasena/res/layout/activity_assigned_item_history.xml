@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".AssignedItemHistory" >
+    
+   <TextView
+        android:id="@+id/tv_logger_itemhistry_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_mai_viewdate1_rosh"
+        android:layout_alignParentLeft="true"
+        android:text="You are logged in as:"
+        android:textColor="#ffee28" />
+   
+   <TextView
+        android:id="@+id/tv_aih_startdate_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_mai_rep_rosh"
+        android:layout_marginTop="14dp"
+        android:text="Start Date"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <TextView
+       android:id="@+id/tv_aih_viewdate1_rosh"
+       android:layout_width="150dp"
+       android:layout_height="wrap_content"
+       android:layout_alignBottom="@+id/tv_aih_startdate_rosh"
+       android:layout_alignParentRight="true"
+       android:text="TextView"
+       android:textColor="@android:color/black" />
+
+   <TextView
+       android:id="@+id/tv_logger_itemload_rosh"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/tv_aih_viewdate1_rosh"
+       android:layout_alignLeft="@+id/tv_aih_viewdate1_rosh"
+       android:layout_alignParentRight="true"
+       android:text="TextView"
+       android:textColor="#ffee28" />
+
+   <TextView
+       android:id="@+id/tv_aih_enddate_rosh"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/tv_aih_startdate_rosh"
+       android:layout_marginTop="14dp"
+       android:text="End Date"
+       android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <TextView
+       android:id="@+id/tv_aih_viewdate2_rosh"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBottom="@+id/tv_aih_enddate_rosh"
+       android:layout_alignLeft="@+id/tv_aih_viewdate1_rosh"
+       android:layout_alignParentRight="true"
+       android:text="TextView"
+       android:textColor="@android:color/black" />
+
+   <TextView
+       android:id="@+id/tv_aih_replbl_rosh"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/tv_aih_enddate_rosh"
+       android:layout_marginTop="19dp"
+       android:text="Item Name"
+       android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <Spinner
+       android:id="@+id/spn_aih_repid_rosh"
+       android:layout_width="wrap_content"
+       android:layout_height="40dp"
+       android:layout_alignBottom="@+id/tv_aih_replbl_rosh"
+       android:layout_alignLeft="@+id/tv_aih_viewdate2_rosh" />
+
+   <Button
+       android:id="@+id/btn_aih_view_rosh"
+       style="?android:attr/buttonStyleSmall"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/tv_aih_replbl_rosh"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="15dp"
+       android:text="View Assigned Item History" />
+
+   <TextView
+       android:id="@+id/tv_aih_cost_rosh"
+       android:layout_width="50dp"
+       android:layout_height="wrap_content"
+       android:layout_alignTop="@+id/tv_aih_qty_rosh"
+       android:layout_toRightOf="@+id/btn_aih_view_rosh"
+       android:text="Unit Cost(Rs.)" 
+       android:textColor="@color/white"
+       android:textSize="12dp" />
+
+   <TextView
+       android:id="@+id/tv_aih_lbl4_rosh"
+       android:layout_width="50dp"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/btn_aih_view_rosh"
+       android:layout_toRightOf="@+id/tv_aih_replbl_rosh"
+       android:text="Assigned Date"
+       android:textColor="@color/white"
+       android:textSize="12dp" />
+
+   <TextView
+       android:id="@+id/tv_aih_lbl1_rosh"
+       android:layout_width="50dp"
+       android:layout_height="wrap_content"
+       android:layout_alignBaseline="@+id/tv_aih_lbl4_rosh"
+       android:layout_alignBottom="@+id/tv_aih_lbl4_rosh"
+       android:layout_alignParentLeft="true"
+       android:text="Rep ID"
+       android:textColor="@color/white"
+       android:textSize="12dp" />
+
+   <Button
+       android:id="@+id/btn_aih_report_rosh"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/btn_aih_view_rosh"
+       android:layout_alignParentBottom="true"
+       android:text="Create Item-wise Report" />
+
+   <ListView
+       android:id="@+id/lv_aih_display_rosh"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/btn_aih_report_rosh"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/tv_aih_lbl4_rosh" >
+
+   </ListView>
+
+   <TextView
+       android:id="@+id/tv_aih_qty_rosh"
+       android:layout_width="50dp"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/lv_aih_display_rosh"
+       android:layout_alignLeft="@+id/spn_aih_repid_rosh"
+       android:text="Assigned   Qty"
+       android:textColor="@color/white"
+       android:textSize="12dp" />
+    
+</RelativeLayout>

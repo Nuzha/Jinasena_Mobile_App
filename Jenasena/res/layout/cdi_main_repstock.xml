@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround" >
+
+    <TextView
+        android:id="@+id/tv_cdMainRepStock_title_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Logged in As      "
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_cdMainRepStock_id_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/tv_cdMainRepStock_title_Isuru"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_cdMainRepStock_titleheader_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_cdMainRepStock_title_Isuru"
+        android:layout_marginTop="16dp"
+        android:text="       Representative Stock"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv_cdMainRepStock_rid_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_cdMainRepStock_titleheader_Isuru"
+        android:layout_marginTop="17dp"
+        android:text="Rep ID"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/sp_cdMainRepStock_rid_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffee28" 
+        android:background="@drawable/spinner_background"
+        android:layout_alignLeft="@+id/tv_cdMainRepStock_id_Isuru"
+        android:layout_alignTop="@+id/tv_cdMainRepStock_rid_Isuru" />
+
+    <TextView
+        android:id="@+id/tv_cdMainRepStock_name_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_cdMainRepStock_hedname_Isuru"
+        android:layout_alignBottom="@+id/tv_cdMainRepStock_hedname_Isuru"
+        android:layout_alignLeft="@+id/sp_cdMainRepStock_rid_Isuru"
+        android:layout_alignParentRight="true"
+        android:text="dd"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageButton
+        android:id="@+id/bt_cdMainRepStock_call_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_cdMainRepStock_hedname_Isuru"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_cdMainRepStock_hedname_Isuru"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/call" />
+
+    <Button
+        android:id="@+id/bt_cdMainRepStock_date_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/bt_cdMainRepStock_call_Isuru"
+        android:layout_marginTop="24dp"
+         android:textColor="#ffee28"
+        android:layout_toLeftOf="@+id/tv_cdMainRepStock_id_Isuru"
+        android:text="Pick Date" />
+
+    <TextView
+        android:id="@+id/tv_cdMainRepStock_date_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bt_cdMainRepStock_date_Isuru"
+        android:layout_alignLeft="@+id/tv_cdMainRepStock_name_Isuru"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/bt_cdMainRepStock_date_Isuru"
+        android:text="2014/06/03"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/bt_cdMainRepStock_Chart_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/bt_cdMainRepStock_date_Isuru"
+        android:layout_marginTop="75dp"
+         android:drawableLeft="@drawable/charts"
+         android:textColor="#ffee28"
+        android:text="Charts" />
+
+    <TextView
+        android:id="@+id/tv_cdMainRepStock_hedname_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tv_cdMainRepStock_rid_Isuru"
+        android:layout_below="@+id/sp_cdMainRepStock_rid_Isuru"
+        android:layout_marginTop="16dp"
+        android:text="Name"
+        android:textColor="#ffee28"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout></ScrollView>

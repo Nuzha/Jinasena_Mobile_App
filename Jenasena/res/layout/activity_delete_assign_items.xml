@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    tools:context=".DeleteAssignItems" >
+
+    <TextView
+        android:id="@+id/tv_d_log_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="34dp"
+        android:text="You are logged in as:"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_d_logview_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="29dp"
+        android:layout_toRightOf="@+id/tv_d_log_rosh"
+        android:text="TextView" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_d_repview_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_d_rep_rosh"
+        android:layout_alignBottom="@+id/tv_d_rep_rosh"
+        android:layout_alignLeft="@+id/tv_d_logview_rosh"
+        android:text="TextView" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_d_date_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_d_rep_rosh"
+        android:layout_below="@+id/tv_d_rep_rosh"
+        android:layout_marginTop="16dp"
+        android:text="Assigned Date:" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_d_dateview_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_d_date_rosh"
+        android:layout_alignLeft="@+id/tv_d_repview_rosh"
+        android:text="TextView" 
+        android:textColor="#ffee28"/>
+
+    <TextView
+        android:id="@+id/tv_d_item_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_d_date_rosh"
+        android:layout_marginTop="50dp"
+        android:text="Item Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_d_itemview_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_d_item_rosh"
+        android:layout_alignBottom="@+id/tv_d_item_rosh"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/tv_d_log_rosh"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_d_qtyview_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_d_qty_rosh"
+        android:layout_alignBottom="@+id/tv_d_qty_rosh"
+        android:layout_alignLeft="@+id/tv_d_itemview_rosh"
+        android:layout_alignParentRight="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tv_d_qty_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_d_item_rosh"
+        android:layout_marginTop="46dp"
+        android:text="Assigned Quantity"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_d_cost_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_d_qty_rosh"
+        android:layout_marginTop="46dp"
+        android:text="Unit Cost(Rs.)"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_d_costview_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_d_qtyview_rosh"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_d_cost_rosh"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btn_d_dlt_rosh"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_d_cost_rosh"
+        android:layout_marginTop="28dp"
+        android:layout_toRightOf="@+id/tv_d_date_rosh"
+        android:text="Delete" />
+
+    <TextView
+        android:id="@+id/tv_d_rep_rosh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_d_log_rosh"
+        android:layout_below="@+id/tv_d_log_rosh"
+        android:layout_marginTop="14dp"
+        android:text="Rep ID:" 
+        android:textColor="#ffee28"/>
+
+</RelativeLayout>

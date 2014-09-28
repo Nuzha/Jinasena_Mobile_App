@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround" >
+
+    <TextView
+        android:id="@+id/tv_add_customer_hedder_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Logged in as"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_add_customer__Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Medium Text"
+        android:textColor="#ffffff" 
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv_add_customer_Company_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_add_customer_hedder_Isuru"
+        android:layout_marginTop="23dp"
+        android:text="Company Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffee28" />
+
+    <EditText
+        android:id="@+id/et_add_customer_Company_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_add_customer_Company_Isuru"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_add_customer_Owner_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_add_customer_Owner_Isuru"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_add_customer_Owner_Isuru"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/tv_add_customer_City_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/et_add_customer_Owner_Isuru"
+        android:layout_marginTop="23dp"
+        android:text="City"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffee28" />
+
+    <EditText
+        android:id="@+id/et_add_customer_City_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_add_customer_Owner_Isuru"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_add_customer_City_Isuru"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/tv_add_customer_Phone_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_add_customer_City_Isuru"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/et_add_customer_Address_Isuru"
+        android:layout_marginTop="16dp"
+        android:text="Phone"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffee28" />
+
+    <EditText
+        android:id="@+id/et_add_customer_Phone_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_add_customer_Phone_Isuru"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_add_customer_Phone_Isuru"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/tv_add_customer_Owner_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/et_add_customer_Company_Isuru"
+        android:layout_marginTop="14dp"
+        android:text="Owner"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_add_customer_Email_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/et_add_customer_Phone_Isuru"
+        android:layout_marginTop="21dp"
+        android:text="Email"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffee28" />
+
+    <EditText
+        android:id="@+id/et_add_customer_Email_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_add_customer_Phone_Isuru"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_add_customer_Email_Isuru"
+        android:layout_marginTop="14dp"
+        android:ems="10" />
+
+    
+
+    <TextView
+        android:id="@+id/tv_add_customer_Rep_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/et_add_customer_Email_Isuru"
+        android:text="Representative"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffee28" />
+
+    
+    
+    <Spinner
+        android:id="@+id/sp_add_customer_Replist_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_add_customer_Rep_Isuru"
+        android:layout_toLeftOf="@+id/tv_add_customer__Isuru"
+        android:layout_toRightOf="@+id/tv_add_customer_hedder_Isuru"
+        android:background="@drawable/spinner_background"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tv_add_customer_Address_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/et_add_customer_City_Isuru"
+        android:layout_marginTop="16dp"
+        android:text="Address"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffee28" />
+
+    <EditText
+        android:id="@+id/et_add_customer_Address_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_add_customer_Address_Isuru"
+        android:ems="10"
+        android:inputType="textMultiLine"
+         />
+
+    <Button
+        android:id="@+id/bt_add_customer_add_Isuru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="#ffee28"
+        android:layout_alignParentRight="true"
+        android:text="Save" />
+
+</RelativeLayout>
+
+</ScrollView>

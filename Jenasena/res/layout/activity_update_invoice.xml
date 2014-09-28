@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbround"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".UpdateInvoice" >
+
+    <TextView
+        android:id="@+id/tvrepId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvtitlerepid"
+        android:layout_alignBottom="@+id/tvtitlerepid"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="54dp"
+        android:text="repId"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvtitlerepid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Logged in as:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvtitlecusid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvcusId"
+        android:layout_alignBottom="@+id/tvcusId"
+        android:layout_alignLeft="@+id/tvtitlerepid"
+        android:text="Customer Id:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvcusId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvrepId"
+        android:layout_below="@+id/tvrepId"
+        android:text="cusId"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffee28" />
+
+    <TextView
+        android:id="@+id/tvtitleItemname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvtitleQuantity"
+        android:layout_below="@+id/tvtitlecusid"
+        android:layout_marginTop="62dp"
+        android:text="Item Name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvtitleSoldDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvtitleQuantity"
+        android:layout_below="@+id/tvtitleQuantity"
+        android:layout_marginTop="34dp"
+        android:text="Sold Date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvtitlepaidDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvtitleSoldDate"
+        android:layout_below="@+id/tvtitleSoldDate"
+        android:layout_marginTop="34dp"
+        android:text="Paid Date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tvtitleQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvtitlecusid"
+        android:layout_below="@+id/tvtitleItemname"
+        android:layout_marginTop="35dp"
+        android:text="Sold Quantity"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btdate"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/tvtitlepaidDate"
+        android:layout_alignParentRight="true"
+        android:text="Date"
+        android:visibility="invisible"
+         />
+
+    <TextView
+        android:id="@+id/tvitemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvtitleQuantity"
+        android:layout_alignLeft="@+id/etquantity"
+        android:layout_alignRight="@+id/etquantity"
+        android:text="itmName"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/etquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvtitleSoldDate"
+        android:layout_alignLeft="@+id/tvsoldDate"
+        android:layout_toLeftOf="@+id/btdate"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvsoldDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvtitlepaidDate"
+        android:layout_toLeftOf="@+id/btdate"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvtitleItemname"
+        android:layout_below="@+id/tvtitlepaidDate"
+        android:text="Update" />
+
+    <Button
+        android:id="@+id/btDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvcusId"
+        android:layout_below="@+id/tvtitlepaidDate"
+        android:layout_marginRight="18dp"
+        android:text="Delete" />
+
+</RelativeLayout>

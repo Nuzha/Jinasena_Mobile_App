@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.05" 
+        >
+
+     <TextView
+         android:id="@+id/textView3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_marginTop="14dp"
+         android:text="Total                    :"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+         android:id="@+id/textView4"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/textView3"
+         android:layout_marginLeft="25dp"
+         android:layout_toRightOf="@+id/textView3"
+         android:text="Medium Text"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+         android:id="@+id/textView5"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/textView3"
+         android:text="Due Date             :"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+         android:id="@+id/textView6"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/textView4"
+         android:layout_below="@+id/textView4"
+         android:text="Medium Text"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+         android:id="@+id/textView7"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/textView5"
+         android:text="Billed Date          :"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+         android:id="@+id/textView8"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/textView6"
+         android:layout_below="@+id/textView6"
+         android:text="Medium Text"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+         android:id="@+id/textView9"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/textView7"
+         android:text="Paid Date            :"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     <TextView
+         android:id="@+id/textView10"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/textView9"
+         android:layout_alignBottom="@+id/textView9"
+         android:layout_alignLeft="@+id/textView8"
+         android:text="Medium Text"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+     
+    </RelativeLayout>
+
+

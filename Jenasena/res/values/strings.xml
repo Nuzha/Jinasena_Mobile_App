@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Jenasena</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_delete_assign_items">DeleteAssignItems</string>
+    <string name="title_activity_new_assign_items">NewAssignItems</string>
+    <string name="title_activity_rep_list_view">RepListView</string>
+    <string name="title_activity_search_stock">SearchStock</string>
+    <string name="title_activity_view_monthly_history">ViewMonthlyHistory</string>
+    <string name="title_activity_view_rep_history">ViewRepHistory</string>
+    <string name="title_activity_view__assigned__stock">View_Assigned_Stock</string>
+    <string name="title_activity_assignto_customers">AssigntoCustomers</string>
+    <string name="title_activity_view_invoice">ViewInvoice</string>
+    <string name="title_activity_update_invoice">UpdateInvoice</string>
+    <string name="title_activity_customers_acdn_to_rep">CustomersAcdnToRep</string>
+    <string name="title_activity_selection">Selection</string>
+    <string name="title_activity_finalized_invoice">FinalizedInvoice</string>
+    <string name="service_started">Service started !</string>
+    <string name="title_activity_view_available_stock">ViewAvailableStock</string>
+    <string name="title_activity_sell_to_customers">SellToCustomers</string>
+    <string name="title_activity_customers_to_manage_payments">CustomersToManagePayments</string>
+    <string name="title_activity_manage_customer_payments">ManageCustomerPayments</string>
+    <string name="title_activity_invoice_history_selection">InvoiceHistorySelection</string>
+    <string name="title_activity_invoice_history">InvoiceHistory</string>
+    <string name="title_activity_invoice_history_cus">InvoiceHistoryCus</string>
+    <string name="title_activity_invoice_his_date">InvoiceHisDate</string>
+    <string name="title_activity_email_daily_invoice_details">EmailDailyInvoiceDetails</string>
+    <string name="title_activity_return_items">ReturnItems</string>
+    <string name="title_activity_quick_search">QuickSearch</string>
+    <string name="title_activity_search_toatal_assigned_items">SearchToatalAssignedItems</string>
+    <string name="title_activity_available_products">AvailableProducts</string>
+    <string name="title_activity_reporting">Reporting</string>
+    <string name="title_activity_view_rep_wise_history">ViewRepWiseHistory</string>
+    <string name="title_activity_assigned_item_history">AssignedItemHistory</string>
+    <string name="title_activity_check_low_stocks">CheckLowStocks</string>
+    <string name="title_activity_view_low_stock">ViewLowStock</string>
+    <string name="title_activity_send_email">SendEmail</string>
+    <string name="title_activity_view__returned_items">View_Returned_items</string>
+    <string name="title_activity_return_items_email">ReturnItemsEmail</string>
+    <string name="title_activity_view_pending_payments">View_pending_payments</string>
+    <string name="title_activity_totamount">Totamount</string>
+
+</resources>
