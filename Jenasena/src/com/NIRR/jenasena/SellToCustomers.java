@@ -74,7 +74,7 @@ public class SellToCustomers extends Activity implements OnItemSelectedListener{
                     .append(pYear).append("/")        
                     .append(pMonth + 1).append("/")
                     .append(pDay).append("")
-                            );
+                            );  
            
             }
              
