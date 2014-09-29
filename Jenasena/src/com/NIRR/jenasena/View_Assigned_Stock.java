@@ -17,7 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.widget.SimpleCursorAdapter;
 
-public class View_Assigned_Stock extends Activity {
+public class View_Assigned_Stock extends Activity   {
 	private DBCreater dbHelper;
 	private SimpleCursorAdapter dataAdapter;
 	public static String packagename="com.NIRR.redistributionsystem";
